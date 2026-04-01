@@ -38,7 +38,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    background-image: url('../Images/Login/login.png');
+    background-image: url('../Images/Login.jpg');
     background-size: cover;
     background-color: #3a1a0a; /* fallback color until image is added */
     background-position: center;
@@ -82,6 +82,18 @@
     padding: 8px 14px;
     border: #ffffff solid 1px;
   }
+
+  .top-logo a {
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .top-logo a:visited,
+  .top-logo a:hover,
+  .top-logo a:active {
+    color: var(--white);
+    text-decoration: none;
+  }
   
   
   /* ============================================================
@@ -98,12 +110,12 @@
   
   /* Large bold uppercase headline */
   .hero-headline {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(2.8rem, 5vw, 5rem);
-    font-weight: 900;
+    font-weight: 700;
     text-transform: uppercase;
     color: var(--white);
-    line-height: 1.05;
+    line-height: 1;
     letter-spacing: 2px;
     text-shadow: 2px 4px 20px rgba(0, 0, 0, 0.5);
   }
@@ -116,8 +128,10 @@
   .login-card {
     position: relative;
     z-index: 5;
-    width: 450px;
-    margin-right: 10%;
+    width: 550px;
+      margin-right: 10%;
+      margin-top: 30px;
+
     background: var(--card-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -194,7 +208,7 @@
   
   /* Welcome subtitle beneath script heading */
   .card-subtitle {
-    font-style: Bebas Neue;
+    font-family: 'Inter', sans-serif;
     font-size: 1rem;
     color: var(--dark);
     font-weight: 500;
