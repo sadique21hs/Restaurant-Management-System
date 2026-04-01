@@ -1,0 +1,616 @@
+   :root {
+    --gold:       #c8a96e;  
+    --dark:       #1a1a1a;  
+    --white:      #ffffff;
+    --light-bg:   #f9f6f0;   
+    --text-muted: #888;      
+    --text-body:  #555;      
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark);
+    background: var(--white);
+  }
+  
+  /* ============================================================
+      NAVIGATION
+     ============================================================ */
+
+  nav {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 100PX;
+    margin-right: 100px;
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100;
+    height: 55px;
+    padding: 0 40px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+  }
+  
+  /* Brand name */
+  .nav-logo {
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    font-size:1.125rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 1000;
+    flex: 1; 
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+  }
+  
+  .nav-links a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 0.78rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.25s;
+  }
+  
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--gold);
+  }
+  
+  /* Profile button  */
+  .btn-profile {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+
+  .nav-profile-icon {
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.25s;
+  }
+  
+  .btn-profile:hover .nav-profile-icon {
+    color: var(--gold);
+  }
+  
+  .nav-profile-img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
+  }
+  
+  
+  /* ============================================================
+      HERO
+     ============================================================ */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden	;
+    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+    url('../Images/About/Hero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--white);
+  }
+  
+  .hero-content h1 {
+
+    margin-top: 400px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.125rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    align-items: center;
+  }
+  
+  /* Breadcrumb line beneath the hero heading */
+  .hero-breadcrumb {
+    text-align: center;
+    font-size: 0.813rem;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.65);
+    margin-top: 6px;
+    font-weight: 700;
+    
+  }
+  
+  
+  /* ============================================================
+      ABOUT SECTION
+     ============================================================ */
+
+  .about-section {
+    display: flex;
+    gap: 36px;
+    padding: 80px 90px;
+    align-items: flex-start;
+    background: var(--white);
+  }
+  
+  /* About image */
+
+  .about-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    min-width: 500px;
+    max-width: 700px;
+    flex-shrink: 0;
+    margin-left: 178px; 
+  }
+  
+  /* Left image */
+  .about-images img:first-child {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Right image  */
+  .about-images img:nth-child(2) {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    margin-top: 20px;
+  }
+  
+  /* ── About text ── */
+  .about-text {
+    flex: 1;
+    padding-top: 2px; 
+  }
+  
+  .script-heading {
+    font-family: 'Great Vibes', cursive;
+    font-style: italic;
+    color: var(--gold);
+    font-size: 6.25rem;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 3px;
+  }
+  
+  .about-text h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: -40px;  
+    margin-bottom: 32px;
+    margin-left: 3px;
+  }
+  
+  /* Body paragraphs */
+  .about-text p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: var(--text-body);
+    line-height: 1.8;
+    margin-bottom: 14px;
+    font-weight: 400;
+  }
+  
+  
+  /* Phone number — displayed in gold to match design */
+  .about-phone {
+    font-size: 300px;
+    font-weight:800px;
+    color: var(--gold);
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+  }
+
+  .gold-divider {
+    width: 50px;
+    height: 2px;
+    background: var(--gold);
+    margin: 16px 0 22px;
+  }
+  
+  /* ============================================================
+      STATS STRIP
+     ============================================================ */
+
+  .stats-strip {
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    padding: 10px 80px 50px;
+    gap: 0;
+    text-align: center;
+  }
+  
+  /* Each individual stat block */
+  .stat-item {
+    flex: 1;
+    text-align: center;
+    padding: 20px 10px;
+    border-right: 1px solid #e8e0d5;
+  }
+  
+  .stat-item:last-child {
+    border-right: none;
+  }
+  
+  /* Large bold number */
+  .stat-number {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+  }
+  
+  /* Small uppercase label below number */
+  .stat-label {
+    font-size: 0.875rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: 5px;
+  }
+  
+  /* Right-side tagline paragraph (wider flex) */
+  .stats-tagline {
+    flex: 1;
+    text-align: left;
+    padding-left: 30px;
+    font-size: 1.125rem;
+    color: var(--dark);
+    line-height: 1.7;
+    border-right: none;
+    
+  }
+  
+  
+  /* ============================================================
+     6. SERVICES SECTION
+     ============================================================ */
+  .services-section {
+    background: var(--light-bg);
+    padding: 90px 100px;
+    text-align: center;
+  }
+  
+  /* Italic gold script label above section heading */
+  .section-script {
+    font-family: 'Great Vibes', cursive;
+    font-style: italic;
+    color: var(--gold);
+    font-size: 6.25rem;
+    font-weight: 400;
+    margin-top: -5px;
+    align-items: center;
+    
+
+  
+  }
+  
+  /* Bold uppercase section heading */
+  .section-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--dark);
+    margin-top: -39px; 
+    margin-bottom: 50px;
+    align-items: center;
+    
+  
+  }
+  
+  /* Three equal columns for service cards */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  
+  .service-card {
+    text-align: center;
+  }
+  
+  /* Gold icon above each service card */
+  .service-icon {
+    font-size: 3rem;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+  
+  .service-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.063rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  
+  .service-card p {
+    font-size: 0.82rem;
+    color: var(--text-body);
+    line-height: 1.75;
+  }
+  
+  
+  /* ============================================================
+      CHEF SECTION
+     ============================================================ */
+
+  .chef-section {
+    padding: 80px  80px ;
+    background: var(--white);
+    text-align: center;
+  }
+  
+  /* Four columns for chef cards */
+  .chef-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+    margin-left: auto;   
+    margin-right: auto;  
+    max-width: 1200px;
+  }
+  
+  .chef-card {
+    text-align: left;
+  }
+  
+  
+  .chef-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 12px;
+    filter: grayscale(15%);
+    transition: filter 0.3s;
+    border-radius: 5px;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .chef-card:hover img {
+    filter: grayscale(0%);
+  }
+  
+  
+  /* Chef name heading */
+  .chef-card h4 {
+    font-family: 'Arial', serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 2px;
+    margin-top: 10px; 
+  }
+  
+  /* Chef role/title */
+  .chef-card span {
+    font-size:1rem;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  /* Social icon links below chef title */
+  .chef-social a {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .chef-social a:hover {
+    color: var(--gold);
+  }
+  
+  
+  /* ============================================================
+     FOOTER
+     ============================================================ */
+  footer {
+    background: black;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 60px 80px 30px;
+    font-weight: 800;
+  }
+  
+ 
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+    gap: 50px;
+    margin-bottom: 40px;
+  }
+
+  
+  /* logo text in footer */
+  .footer-logo {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.125rem;
+    color: var(--white);
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+  }
+  
+  /* Body copy inside footer columns */
+  footer p {
+    font-size: 0.82rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 16px;
+  }
+  
+  /* Social icons in footer brand column */
+  .footer-social a {
+    color: rgba(255, 255, 255, 0.5);
+    margin-right: 12px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .footer-social a:hover {
+    color: var(--gold);
+  }
+  
+  /* Column headings (e.g. "Open Hours", "Instagram") */
+  .footer-col h5 {
+    color: var(--white);
+    font-size: 0.82rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  
+  /* Opening hours table */
+  .footer-col table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .footer-col table td {
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.55);
+    padding: 3px 0;
+  }
+  
+  .footer-col table td:last-child {
+    text-align: right;
+  }
+  
+  /* ── Instagram thumbnail grid ── */
+  .instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+  
+  
+  
+  
+  .instagram-grid img {
+    width: 100%;
+    height: 60px;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+  }
+  
+  .instagram-grid img:hover {
+    opacity: 2;
+  }
+  
+  
+
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 4px;
+  }
+  
+  .newsletter-form p {
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 0;
+    line-height: 1.6;
+  }
+  
+  .newsletter-form input {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--white);
+    padding: 10px 14px;
+    font-size: 0.78rem;
+    font-family: 'Lato', sans-serif;
+    outline: none;
+    transition: border 0.2s;
+  }
+  
+  .newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+  }
+  
+  .newsletter-form input:focus {
+    border-color: var(--gold);
+  }
+  
+  .newsletter-form button {
+    background: var(--gold);
+    color: var(--white);
+    border: none;
+    padding: 11px;
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .newsletter-form button:hover {
+    background: #b8945a;
+  }
+  
+  /* ── Footer bottom copyright bar ── */
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 22px;
+    text-align: center;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 1px;
+  }
