@@ -1,0 +1,111 @@
+   :root {
+    --gold:       #c8a96e;  
+    --dark:       #1a1a1a;  
+    --white:      #ffffff;
+    --light-bg:   #f9f6f0;   
+    --text-muted: #888;      
+    --text-body:  #555;      
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark);
+    background: var(--white);
+  }
+  
+  /* ============================================================
+      NAVIGATION
+     ============================================================ */
+
+  nav {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 100PX;
+    margin-right: 100px;
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100;
+    height: 55px;
+    padding: 0 40px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+  }
+  
+  /* Brand name */
+  .nav-logo {
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    font-size:1.125rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 1000;
+    flex: 1; 
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+  }
+  
+  .nav-links a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 0.78rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.25s;
+  }
+  
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--gold);
+  }
+  
+  /* Profile button  */
+  .btn-profile {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+
+  .nav-profile-icon {
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.25s;
+  }
+  
+  .btn-profile:hover .nav-profile-icon {
+    color: var(--gold);
+  }
+  
+  .nav-profile-img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
+  }
+  

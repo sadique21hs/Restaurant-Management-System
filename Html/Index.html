@@ -3,34 +3,312 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feliciano Restaurant - About</title>
+  <title>Feliciano Restaurant - Home</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
-  <link rel="stylesheet" href="../CSS/about.css">
+  <link rel="stylesheet" href="../CSS/Index.css">
 
 </head>
 <body>
+  <section class="hero-home">
+    <div class="hero-overlay"></div>
+
+    <nav>
+      <a href="Index.html" class="nav-logo" aria-label="Go to Home">Feliciano</a>
+
+      <ul class="nav-links">
+        <li><a href="Index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <a href="login.html" class="btn-profile" aria-label="Go to Login">
+        <img src="../Images/profile.png" alt="Profile" class="nav-profile-img">
+      </a>
+    </nav>
+
+    <div class="hero-center">
+      <div class="script-title">Feliciano</div>
+       <h1>Wholesome &amp; Delicious</h1>
+    </div>
+
+    <section class="dish-row">
+      <div class="dish-card">
+        <img src="../Images/1.png" alt="Grilled beef with potatoes">
+        <p>Grilled Beef with potatoes<br>Meat, Potatoes, Rice, Tomatoes</p>
+      </div>
+
+      <div class="dish-card">
+        <img src="../Images/2.png" alt="Fried fish with vegetables">
+        <p>Fried Fish with Vegetables<br>Fish, Carrot, Beans, Oil</p>
+      </div>
+
+      <div class="dish-card">
+        <img src="../Images/3.png" alt="Grilled beef with herb butter">
+        <p>Grilled Beef with Herb Butter<br>Beef, Garlic Butter, Pepper</p>
+      </div>
+
+      <div class="dish-card">
+        <img src="../Images/4.png" alt="Salmon and roasted potato">
+        <p>Salmon &amp; Roasted Potato<br>Salmon, Potato, Olive Oil</p>
+      </div>
+    </section>
+  </section>
+
   <!-- ============================================================
-  NAVIGATION
- ============================================================ -->
-  <nav>
-    <div class="nav-logo">Feliciano</div>
+       ABOUT SECTION 
+       ============================================================ -->
 
-    <ul class="nav-links">
-      <li><a href="">Home</a></li>
-      <li><a href="" class="active">About</a></li>
-      <li><a href="">Menu</a></li>
-      <li><a href="">Contact</a></li>
-    </ul>
+  <section class="about-section">
 
-    <a href="login.html" class="btn-profile" aria-label="Go to Login">
-      <img src="../Images/profile.png" alt="Profile" class="nav-profile-img">
-    </a>
+    <div class="about-images">
+      <img src="../Images/Body1.png" alt="Chef cooking">
+      <img src="../Images/Body2.png" alt="Chef cooking">
 
-  </nav>
-  <!--============================================================
+    </div>
+
+    <div class="about-text">
+     
+      <div class="script-heading">about</div>
+      <h2>Feliciano<br>Restaurant</h2>
+      <p>A Small River Named Duden Flows By Their Place And Supplies It With The Necessary Regelialia. It Is A Paradisematic Country, In Which Roasted Parts Of Sentences Fly Into Your Mout.
+      </p>
+
+      <p>
+        <span style="font-weight:400;margin-right:10px;">
+        Mon – Fri
+        </span>   
+       <span style="font-weight:700;color:#000000;">
+        8AM – 11 PM
+       </span>
+      </p>
+
+      <p class="about-phone" style="color: #c8a96e;font-size: 40px;">+ 1-978-123-4567</p>
+
+    </div>
+  </section>
+ 
+    <div class="stats-strip">
+
+      <div class="stat-item">
+        <div class="stat-number">18</div>
+        <div class="stat-label">Years of<br>Experienced</div>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-number">100</div>
+        <div class="stat-label">Menus/Dish</div>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-number">50</div>
+        <div class="stat-label">Staffs</div>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-number">15,000</div>
+        <div class="stat-label">Happy Customers</div>
+      </div>
+  
+      <div class="stats-tagline">
+        A small river named Duden flows by their place and supplies it with the necessary regelialia.
+      </div>
+
+    </div>
+
+  <!-- ============================================================
+       MENU SHOWCASE SECTION
+       ============================================================ -->
+  <section class="menu-showcase">
+    <div class="menu-script">Specialties</div>
+    <h2 class="menu-title">Our Menu</h2>
+
+    <div class="menu-grid">
+      <div class="menu-image-card"><img src="../Images/5.png" alt="Noodle dish"></div>
+
+      <div class="menu-info-card">
+        <div class="menu-item-top">
+          <h3>Grilled Beef<br>with potatoes</h3>
+          <span>$29</span>
+        </div>
+        <p>Meat, Potatoes, Rice, Tomatoe</p>
+        <a href="menu.html" class="menu-order-btn">Order now</a>
+      </div>
+
+      <div class="menu-image-card"><img src="../Images/2.png" alt="Grilled chicken dish"></div>
+
+      <div class="menu-info-card">
+        <div class="menu-item-top">
+          <h3>Grilled Beef<br>with potatoes</h3>
+          <span>$29</span>
+        </div>
+        <p>Meat, Potatoes, Rice, Tomatoe</p>
+        <a href="menu.html" class="menu-order-btn">Order now</a>
+      </div>
+
+      <div class="menu-info-card">
+        <div class="menu-item-top">
+          <h3>Grilled Beef<br>with potatoes</h3>
+          <span>$29</span>
+        </div>
+        <p>Meat, Potatoes, Rice, Tomatoe</p>
+        <a href="menu.html" class="menu-order-btn">Order now</a>
+      </div>
+
+      <div class="menu-image-card"><img src="../Images/1.png" alt="Bowl dish"></div>
+
+      <div class="menu-info-card">
+        <div class="menu-item-top">
+          <h3>Grilled Beef<br>with potatoes</h3>
+          <span>$29</span>
+        </div>
+        <p>Meat, Potatoes, Rice, Tomatoe</p>
+        <a href="menu.html" class="menu-order-btn">Order now</a>
+      </div>
+
+      <div class="menu-image-card"><img src="../Images/6.png" alt="Fried chicken dish"></div>
+
+      <div class="menu-image-card"><img src="../Images/3.png" alt="Avocado toast"></div>
+
+      <div class="menu-info-card">
+        <div class="menu-item-top">
+          <h3>Grilled Beef<br>with potatoes</h3>
+          <span>$29</span>
+        </div>
+        <p>Meat, Potatoes, Rice, Tomatoe</p>
+        <a href="menu.html" class="menu-order-btn">Order now</a>
+      </div>
+
+      <div class="menu-image-card"><img src="../Images/2.png" alt="Grilled chicken dish"></div>
+
+      <div class="menu-info-card">
+        <div class="menu-item-top">
+          <h3>Grilled Beef<br>with potatoes</h3>
+          <span>$29</span>
+        </div>
+        <p>Meat, Potatoes, Rice, Tomatoe</p>
+        <a href="menu.html" class="menu-order-btn">Order now</a>
+      </div>
+    </div>
+  </section>
+  <!-- ============================================================
+       CHEF SECTION 
+       ============================================================ -->
+  <section class="chef-section">
+    <div class="menu-script">Chef</div>
+    <h2 class="section-title">Our Master Chef</h2>
+
+
+    <div class="chef-grid">
+
+      <div class="chef-card">
+      
+          <img src="../Images/Chef1.png" alt="John Smooth">
+        
+        <h4>John Smooth</h4>
+        <span>Restaurant Owner</span>
+        <div class="chef-social">
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="chef-card">
+  
+         
+      <img src="../Images/Chef2.png" alt="John Smooth">
+        
+        <h4>John Smooth</h4>
+        <span>Restaurant Owner</span>
+        <div class="chef-social">
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="chef-card">
+
+        <img src="../Images/Chef3.png" alt="John Smooth">
+
+        <h4>John Smooth</h4>
+        <span>Restaurant Owner</span>
+        <div class="chef-social">
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="chef-card">
+        <img src="../Images/Chef4.png" alt="John Smooth">
+        <h4>John Smooth</h4>
+        <span>Restaurant Owner</span>
+        <div class="chef-social">
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       TESTIMONIAL SECTION
+       ============================================================ -->
+  <section class="testimony-section">
+    <div class="testimony-script">Testimony</div>
+    <h2 class="testimony-title">Happy Customer</h2>
+
+    <div class="testimony-grid">
+      <article class="testimony-card">
+        <div class="testimony-avatar-wrap">
+          <img src="../Images/Chef1.png" alt="Ian Boner" class="testimony-avatar">
+          <span class="testimony-quote"><i class="fas fa-quote-left"></i></span>
+        </div>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <h4>Ian Boner</h4>
+        <span class="testimony-role">CUSTOMER</span>
+      </article>
+
+      <article class="testimony-card">
+        <div class="testimony-avatar-wrap">
+          <img src="../Images/Chef2.png" alt="Jason McClean" class="testimony-avatar">
+          <span class="testimony-quote"><i class="fas fa-quote-left"></i></span>
+        </div>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <h4>Jason McClean</h4>
+        <span class="testimony-role">CUSTOMER</span>
+      </article>
+
+      <article class="testimony-card">
+        <div class="testimony-avatar-wrap">
+          <img src="../Images/Chef4.png" alt="Mark Stevenson" class="testimony-avatar">
+          <span class="testimony-quote"><i class="fas fa-quote-left"></i></span>
+        </div>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <h4>Mark Stevenson</h4>
+        <span class="testimony-role">CUSTOMER</span>
+      </article>
+    </div>
+
+    <div class="testimony-dots" aria-hidden="true">
+      <span class="active"></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
        FOOTER — 
        ============================================================ -->
   <footer>
