@@ -36,7 +36,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100;
-    height: 55px;
+    height: 64px;
     padding: 0 40px;
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.45);
@@ -45,12 +45,14 @@
   /* Brand name */
   .nav-logo {
     color: var(--white);
-    font-family: 'Poppins', sans-serif;
-    font-size:1.125rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.45rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 1000;
-    flex: 1; 
+    flex: 0 0 auto;
+    display: inline-block;
+    text-decoration: none;
   }
   
   .nav-links {
@@ -66,7 +68,7 @@
   .nav-links a {
     color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
-    font-size: 0.78rem;
+    font-size: 1rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     transition: color 0.25s;
@@ -79,14 +81,15 @@
   
   /* Profile button  */
   .btn-profile {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
+    flex: 0 0 auto;
+    display: inline-flex;
+    justify-content: center;
     align-items: center;
     background: none;
     border: none;
     outline: none;
     padding: 0;
+    margin-left: auto;
     cursor: pointer;
   }
   
@@ -102,8 +105,8 @@
   }
   
   .nav-profile-img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     object-fit: cover;
     display: block;
     border-radius: 50%;
