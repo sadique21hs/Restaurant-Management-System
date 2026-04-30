@@ -1,0 +1,70 @@
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #000;
+      color: #fff;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .dashboard {
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.7)),
+        url('../Images/customer-bg.jpg') center/cover no-repeat;
+    }
+
+    .topbar {
+      height: 78px;
+      background: linear-gradient(90deg, #3d3228, #201a14 55%, #3d3228);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 50px;
+    }
+
+    .brand {
+      border: 1px solid rgba(255,255,255,.45);
+      padding: 9px 14px;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .top-right {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .admin-title {
+      text-align: right;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .logout {
+      width: 32px;
+      height: 32px;
+      border: 1px solid rgba(224,194,143,.6);
+      border-radius: 6px;
+      display: grid;
+      place-items: center;
+      color: #e0c28f;
+      font-size: 18px;
+    }
+
+    .logout::before {
+      content: "";
+      width: 18px;
+      height: 18px;
+      background-color: #e0c28f;
+      -webkit-mask: url('../Images/logout.png') no-repeat center / contain;
+      mask: url('../Images/logout.png') no-repeat center / contain;
+      display: block;
+    }
+
+    .logout img {
+      display: none;
+    }
