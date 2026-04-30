@@ -13,6 +13,7 @@ tabs.forEach(tab => {
   });
 });
 
+
 const modal = document.getElementById('addEmployeeModal');
 const addEmployeeBtn = document.querySelector('.add-employee-btn');
 const modalClose = document.querySelector('.modal-close');
