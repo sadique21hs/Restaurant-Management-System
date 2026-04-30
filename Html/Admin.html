@@ -19,12 +19,30 @@
 
     <main class="container">
       <section class="tabs">
-        <div class="tab active" data-section="overview">▣ Overview</div>
-        <div class="tab" data-section="employees">👥 Employees</div>
-        <div class="tab" data-section="customer">👤 Customer</div>
-        <div class="tab" data-section="tables">▤ Tables</div>
-        <div class="tab" data-section="menu">✂ Menu Items</div>
-        <div class="tab" data-section="reports">▮ Reports</div>
+        <div class="tab active" data-section="overview" style="display: flex; align-items: center; gap: 8px;">
+          <img src="../Images/search-file.png" alt="overview-icon" style="width: 20px; height: 20px; vertical-align: middle;"> 
+          <span>Overview</span>
+        </div>
+        <div class="tab" data-section="employees" style="display: flex; align-items: center; gap: 8px;">
+          <img src="../Images/employees.png" alt="employees-icon" style="width: 20px; height: 20px; vertical-align: middle;">
+          <span>Employees</span>
+        </div>
+        <div class="tab" data-section="customer" style="display: flex; align-items: center; gap: 8px;">
+          <img src="../Images/customer.png" alt="customer-icon" style="width: 20px; height: 20px; vertical-align: middle;">
+          <span>Customer</span>
+        </div>
+        <div class="tab" data-section="tables" style="display: flex; align-items: center; gap: 8px;">
+          <img src="../Images/tables.png" alt="tables-icon" style="width: 20px; height: 20px; vertical-align: middle;">
+          <span>Tables</span>
+        </div>
+        <div class="tab" data-section="menu" style="display: flex; align-items: center; gap: 8px;">
+          <img src="../Images/menu.png" alt="menu-icon" style="width: 20px; height: 20px; vertical-align: middle;">
+          <span>Menu Items</span>
+        </div>
+        <div class="tab" data-section="reports" style="display: flex; align-items: center; gap: 8px;">
+          <img src="../Images/reports.png" alt="reports-icon" style="width: 20px; height: 20px; vertical-align: middle;">
+          <span>Reports</span>
+        </div>
       </section>
 
       <div class="section-content active" id="overview">
@@ -161,7 +179,7 @@
               <h2>Table Management</h2>
               <p class="sub">Add and manage restaurant tables</p>
             </div>
-            <button type="button" class="add-table-btn">＋ Add Table</button>
+            <button type="button" class="add-table-btn">+ Add Table</button>
           </div>
 
           <div class="tables-grid" id="tablesGrid">
@@ -339,16 +357,13 @@
 <div class="modal" id="addEmployeeModal">
   <div class="modal-content">
 
-    <!-- Header -->
     <div class="modal-header">
       <h3>Add New Employee</h3>
       <button type="button" class="modal-close">&times;</button>
     </div>
 
-    <!-- FORM START -->
     <form id="employeeForm" class="employee-form">
 
-      <!-- Full Name + Email -->
       <div class="form-row-flex">
 
         <div class="form-group">
@@ -363,7 +378,6 @@
 
       </div>
 
-      <!-- Role + Password -->
       <div class="form-row-flex">
 
         <div class="form-group">
@@ -382,20 +396,17 @@
 
       </div>
 
-      <!-- Certificate -->
       <div class="form-group full-width">
         <label for="certificate">Certificate (PDF)</label>
         <input type="file" id="certificate" name="certificate" accept=".pdf" required>
       </div>
 
-      <!-- Buttons -->
       <div class="btn-row">
         <button type="submit" class="btn-primary">Add Employee</button>
         <button type="reset" class="btn-secondary">Cancel</button>
       </div>
 
     </form>
-    <!-- FORM END -->
 
   </div>
 </div>

@@ -12,8 +12,6 @@ tabs.forEach(tab => {
     document.getElementById(sectionId).classList.add('active');
   });
 });
-
-
 const modal = document.getElementById('addEmployeeModal');
 const addEmployeeBtn = document.querySelector('.add-employee-btn');
 const modalClose = document.querySelector('.modal-close');
@@ -68,8 +66,6 @@ document.addEventListener('keydown', (e) => {
     closeTableModal();
   }
 });
-
-// Table modal helpers
 const tableModal = document.getElementById('addTableModal');
 const openTableModal = () => {
   if (!tableModal) return;
@@ -104,13 +100,6 @@ if (addTableBtn) {
   });
 }
 
-
-const logoutBtn = document.querySelector('.logout');
-logoutBtn.addEventListener('click', () => {
-  if (confirm('Are you sure you want to logout?')) {
-    alert('Logging out...');
-  }
-});
 
 
 

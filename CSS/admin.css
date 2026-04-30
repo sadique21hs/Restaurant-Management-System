@@ -1,3 +1,11 @@
+    /* Tab icon color states */
+    .tab img {
+      filter: brightness(0) invert(1); /* default: white */
+      transition: filter 0.2s;
+    }
+    .tab.active img {
+      filter: brightness(0) invert(0); /* active: black */
+    }
     body {
       font-family: 'Poppins', sans-serif;
       background: #000;
