@@ -1,0 +1,250 @@
+/* ==========================================
+   CSS Variables — matched to screenshot
+========================================== */
+:root {
+  --bg-page:        #51483b;
+  --bg-darker:      #4a4030;
+  --bg-card:        #6e6050;
+  --bg-card-hover:  #7a6c5c;
+  --accent:         #c8a96a;
+  --accent-light:   #dbbf85;
+  --accent-dark:    #c8a96a;
+  --text-primary:   #f0e8d8;
+  --text-secondary: #c8b898;
+  --text-muted:     #9a8a78;
+  --tag-bg:         #7a6a58;
+  --tag-text:       #d8c8a8;
+  --nav-bg:         #625a4e;
+  --nav-text:       #ffffff;
+  --cart-bg:        #625A4F;
+  --shadow-card:    0 2px 12px rgba(0,0,0,0.28);
+  --shadow-nav:     0 2px 8px rgba(0,0,0,0.15);
+  --radius-card:    10px;
+  --radius-btn:     6px;
+}
+
+/* ==========================================
+   Reset & Base Layout (FIXED FOR SCROLLING)
+========================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100vh; /* Exactly the height of the screen */
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  overflow: hidden; /* This removes the main page scrollbar */
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================
+   Navbar
+========================================== */
+.navbar {
+  background-color: var(--nav-bg);
+  border: 1.5px solid white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  margin: 20px 18px 0;
+  box-shadow: var(--shadow-nav);
+  flex-shrink: 0; /* Prevents navbar from squishing */
+}
+
+.nav-links {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+.nav-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--nav-text);
+  font-size: 18px;
+  font-weight: 700;
+  padding: 7px 22px;
+  border-radius: 5px;
+  border: 1px solid white;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.nav-item.active {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ==========================================
+   Main Layout (FIXED HEIGHT)
+========================================== */
+.main-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px; /* Slightly wider for the cart */
+  gap: 18px;
+  padding: 16px 18px 20px;
+  flex: 1; /* Fills the rest of the screen below navbar */
+  min-height: 0; /* Crucial for internal scrolling to work */
+}
+
+/* ==========================================
+   Menu Section (Left)
+========================================== */
+.menu-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 0; /* Allows children to be scrollable */
+}
+
+.category-bar {
+  display: flex;
+  padding: 14px 18px;
+  border: 1px solid white;
+  border-radius: 10px;
+  gap: 15px;
+  background-color: var(--nav-bg);
+  overflow-x: auto;
+  flex-shrink: 0;
+}
+
+.cat-btn {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.cat-btn.active {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ==========================================
+   Menu Grid (THE SCROLLABLE AREA)
+========================================== */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  overflow-y: auto; /* Only this part scrolls */
+  padding-right: 5px;
+}
+
+.menu-grid::-webkit-scrollbar { width: 5px; }
+.menu-grid::-webkit-scrollbar-thumb {
+  background: var(--accent-dark);
+  border-radius: 5px;
+}
+
+/* ==========================================
+   Menu Card
+========================================== */
+.menu-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  border: 1px solid whitesmoke;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.menu-card:hover { transform: translateY(-2px); }
+
+.card-img {
+  width: 100%;
+  height: 140px;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.card-name { font-size: 13px; font-weight: 600; }
+.card-price { font-size: 13px; font-weight: 700; color: var(--accent); }
+.card-desc { font-size: 11px; color: var(--text-muted); flex: 1; }
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.add-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+/* ==========================================
+   Cart Panel (CENTERED & SIZED)
+========================================== */
+.cart-panel {
+  background: var(--cart-bg);
+  border-radius: 12px;
+  border: 1.5px solid white;
+  display: flex;
+  flex-direction: column;
+  
+  /* Centering Logic */
+  align-self: center;      /* Centers it vertically in the grid row */
+  width: 100%;             /* Fits the 320px column */
+  max-height: 450px;       /* Keeps it a nice "Middle" size */
+  min-height: 350px;
+  
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.cart-header {
+  padding: 20px 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+}
+
+.cart-title {
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.cart-empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  opacity: 0.7;
+}
+
+.cart-empty-icon {
+  font-size: 40px;
+  color: var(--accent);
+}
