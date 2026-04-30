@@ -195,6 +195,17 @@ logoutBtn.addEventListener('click', () => {
   const customerSection = document.getElementById('customer');
   if (!customerSection) return;
 
+  // Design-only: disable approve/reject behavior for now.
+  customerSection.addEventListener('click', (e) => {
+    const actionBtn = e.target.closest('[data-action]');
+    if (actionBtn) {
+      e.preventDefault();
+      return;
+    }
+  });
+
+  return;
+
   const pendingList = document.getElementById('pendingCustomers');
   const approvedList = document.getElementById('approvedCustomers');
   const pendingCount = document.getElementById('pendingCount');
@@ -293,7 +304,6 @@ logoutBtn.addEventListener('click', () => {
   const tableNumberInput = document.getElementById('tableNumber');
   const capacityInput = document.getElementById('tableCapacity');
   const positionSelect = document.getElementById('tablePosition');
-  const presetSelect = document.getElementById('tableImagePreset');
   const fileInput = document.getElementById('tableImageFile');
 
   const positionLabelMap = {
@@ -315,26 +325,37 @@ logoutBtn.addEventListener('click', () => {
       });
       if (dataUrl) return dataUrl;
     }
-    const preset = (presetSelect?.value || '4_people table.jpg').trim();
-    return `../Images/Table/${preset}`;
+    return '../Images/Table/4_people table.jpg';
   };
 
   const setDefaults = () => {
     if (tableNumberInput) tableNumberInput.value = String(getNextTableId());
     if (capacityInput && !capacityInput.value) capacityInput.value = '6';
     if (positionSelect && !positionSelect.value) positionSelect.value = '';
-    if (presetSelect && !presetSelect.value) presetSelect.value = '4_people table.jpg';
     if (fileInput) fileInput.value = '';
   };
 
   addBtn.addEventListener('click', () => {
-    setDefaults();
-    openTableModal();
+    // Disabled: do nothing on click
+    return;
+  });
+
+  tablesSection.addEventListener('click', (e) => {
+    const deleteBtn = e.target.closest('.table-delete-btn');
+    if (!deleteBtn) return;
+    const card = deleteBtn.closest('.table-card');
+    if (!card) return;
+    card.remove();
   });
 
   if (form) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+
+      // Temporarily disabled: do not add new tables
+      form.reset();
+      closeTableModal();
+      return;
 
       if (typeof form.reportValidity === 'function' && !form.reportValidity()) {
         return;
@@ -395,6 +416,17 @@ logoutBtn.addEventListener('click', () => {
 (() => {
   const menuSection = document.getElementById('menu');
   if (!menuSection) return;
+
+  // Design-only: disable approve/reject behavior for now.
+  menuSection.addEventListener('click', (e) => {
+    const actionBtn = e.target.closest('[data-action]');
+    if (actionBtn) {
+      e.preventDefault();
+      return;
+    }
+  });
+
+  return;
 
   const pendingList = document.getElementById('pendingMenuItems');
   const approvedList = document.getElementById('approvedMenuItems');

@@ -993,6 +993,12 @@
   gap: 10px;
 }
 
+.menu-action-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .menu-tag {
   font-size: 9px;
   font-weight: 800;
@@ -1017,6 +1023,24 @@
 }
 
 .menu-approve-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0,0,0,.25);
+}
+
+.menu-reject-btn {
+  height: 24px;
+  padding: 0 10px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 800;
+  cursor: pointer;
+  border: 1px solid rgba(224, 115, 59, 0.55);
+  background: rgba(224, 115, 59, 0.14);
+  color: rgba(255,255,255,.92);
+  transition: all 0.25s ease;
+}
+
+.menu-reject-btn:hover {
   transform: translateY(-1px);
   box-shadow: 0 8px 18px rgba(0,0,0,.25);
 }
@@ -1049,6 +1073,182 @@
   }
 
   .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.table-delete-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.25);
+  background: rgba(0,0,0,.25);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all 0.2s ease;
+}
+
+.table-delete-btn:hover {
+  border-color: rgba(224, 115, 59, 0.65);
+  background: rgba(224, 115, 59, 0.15);
+}
+
+/* Reports */
+.reports-panel {
+  margin-top: 18px;
+  padding: 26px;
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 10px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+}
+
+.reports-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.reports-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.reports-header .sub {
+  font-size: 12px;
+  color: rgba(255,255,255,.75);
+  font-weight: 600;
+}
+
+.download-report-btn {
+  height: 34px;
+  padding: 0 14px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,.35);
+  background: rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.download-report-btn:hover {
+  border-color: rgba(199,164,118,.55);
+  box-shadow: 0 8px 18px rgba(0,0,0,.25);
+  transform: translateY(-1px);
+}
+
+.reports-filter {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  padding: 16px;
+  background: rgba(0,0,0,.22);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+
+.date-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.date-field label {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255,255,255,.9);
+}
+
+.date-field input {
+  height: 32px;
+  padding: 0 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,.25);
+  background: rgba(255,255,255,.14);
+  color: #fff;
+  font-size: 12px;
+}
+
+.reports-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.report-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.25);
+}
+
+.report-card p {
+  font-size: 12px;
+  color: rgba(255,255,255,.8);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.report-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.report-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  background: rgba(255,255,255,.12);
+}
+
+.report-icon.green { color: #4ade80; }
+.report-icon.blue { color: #60a5fa; }
+.report-icon.purple { color: #c084fc; }
+
+@media (max-width: 900px) {
+  .reports-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .reports-panel {
+    padding: 18px;
+  }
+
+  .reports-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .reports-filter {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .reports-cards {
     grid-template-columns: 1fr;
   }
 }

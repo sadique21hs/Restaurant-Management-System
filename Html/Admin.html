@@ -252,7 +252,10 @@
                   <div class="menu-desc">Classic tomato sauce, mozzarella, and fresh basil</div>
                   <div class="menu-bottom-row">
                     <span class="menu-tag">Pizza</span>
-                    <button type="button" class="menu-approve-btn" data-action="approve-menu">Approved</button>
+                    <div class="menu-action-row">
+                      <button type="button" class="menu-approve-btn" data-action="approve-menu">Approved</button>
+                      <button type="button" class="menu-reject-btn" data-action="reject-menu">Reject</button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -321,8 +324,50 @@
       </div>
 
       <div class="section-content" id="reports">
-        <h2>Reports</h2>
-        <p class="sub">Coming soon...</p>
+        <div class="reports-panel">
+          <div class="reports-header">
+            <div>
+              <h2>Financial Reports</h2>
+              <p class="sub">View Revenue And Sales Analytics</p>
+            </div>
+            <button type="button" class="download-report-btn">⤓ Download Report</button>
+          </div>
+
+          <div class="reports-filter">
+            <div class="date-field">
+              <label for="reportStart">Start Date</label>
+              <input type="date" id="reportStart" name="reportStart" value="2026-02-04">
+            </div>
+            <div class="date-field">
+              <label for="reportEnd">End Date</label>
+              <input type="date" id="reportEnd" name="reportEnd" value="2026-02-04">
+            </div>
+          </div>
+
+          <div class="reports-cards">
+            <div class="report-card">
+              <div class="report-icon green">$</div>
+              <div>
+                <p>Total Revenue</p>
+                <h3>$122</h3>
+              </div>
+            </div>
+            <div class="report-card">
+              <div class="report-icon blue">▦</div>
+              <div>
+                <p>Total Orders</p>
+                <h3>0</h3>
+              </div>
+            </div>
+            <div class="report-card">
+              <div class="report-icon purple">$</div>
+              <div>
+                <p>Avg Order Value</p>
+                <h3>$0</h3>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 
@@ -424,21 +469,10 @@
             <option value="entrance">Near Entrance</option>
           </select>
         </div>
-
-        <div class="form-group">
-          <label for="tableImagePreset">Table Image</label>
-          <select id="tableImagePreset" name="tableImagePreset" required>
-            <option value="4_people table.jpg">4 People Table</option>
-            <option value="Couple table.jpg">Couple Table</option>
-            <option value="Family Table.jpg">Family Table</option>
-            <option value="Outdoor.jpg">Outdoor Table</option>
-            <option value="window table.jpg">Window Table</option>
-          </select>
-        </div>
       </div>
 
       <div class="form-group full-width">
-        <label for="tableImageFile">Or Upload Image (optional)</label>
+        <label for="tableImageFile">Upload Table Image</label>
         <input type="file" id="tableImageFile" name="tableImageFile" accept="image/*">
       </div>
 
