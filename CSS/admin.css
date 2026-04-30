@@ -1,10 +1,10 @@
-    /* Tab icon color states */
+
     .tab img {
-      filter: brightness(0) invert(1); /* default: white */
+      filter: brightness(0) invert(1); 
       transition: filter 0.2s;
     }
     .tab.active img {
-      filter: brightness(0) invert(0); /* active: black */
+      filter: brightness(0) invert(0); 
     }
     body {
       font-family: 'Poppins', sans-serif;
@@ -343,7 +343,6 @@
       box-shadow: 0 4px 12px rgba(100, 200, 100, 0.15);
     }
 
-/* Customer Approval */
 .customer-approval {
   margin-top: 18px;
   padding: 26px;
@@ -646,8 +645,6 @@
   font-size: 13px;
   transition: all 0.3s ease;
 }
-
-/* Alias support for current Admin.html markup */
 .form-row-flex {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -698,29 +695,6 @@
   background: rgba(255, 255, 255, 0.14);
   border-color: rgba(199, 164, 118, 0.4);
 }
-
-@media (max-width: 720px) {
-  .form-row-flex {
-    grid-template-columns: 1fr;
-  }
-
-  .modal {
-    padding: 18px 12px;
-    align-items: flex-start;
-  }
-
-  .modal-content {
-    width: 100%;
-    max-height: calc(100vh - 36px);
-    padding: 16px 16px 18px;
-  }
-}
-
-.form-group input[type="file"] {
-  max-width: 100%;
-}
-
-/* Tables */
 .tables-panel {
   margin-top: 18px;
   padding: 26px;
@@ -864,30 +838,6 @@
   color: rgba(255,255,255,.55);
   font-weight: 700;
 }
-
-@media (max-width: 1000px) {
-  .tables-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 720px) {
-  .tables-panel {
-    padding: 18px;
-  }
-
-  .tables-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 420px) {
-  .tables-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Menu Items */
 .menu-approval {
   margin-top: 18px;
   padding: 26px;
@@ -1083,22 +1033,6 @@
   font-size: 12px;
 }
 
-@media (max-width: 1000px) {
-  .menu-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 720px) {
-  .menu-approval {
-    padding: 18px;
-  }
-
-  .menu-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 .table-delete-btn {
   position: absolute;
   top: 8px;
@@ -1121,7 +1055,6 @@
   background: rgba(224, 115, 59, 0.15);
 }
 
-/* Reports */
 .reports-panel {
   margin-top: 18px;
   padding: 26px;
@@ -1247,30 +1180,3 @@
 .report-icon.green { color: #4ade80; }
 .report-icon.blue { color: #60a5fa; }
 .report-icon.purple { color: #c084fc; }
-
-@media (max-width: 900px) {
-  .reports-cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 720px) {
-  .reports-panel {
-    padding: 18px;
-  }
-
-  .reports-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .reports-filter {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 520px) {
-  .reports-cards {
-    grid-template-columns: 1fr;
-  }
-}
