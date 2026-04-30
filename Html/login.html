@@ -13,18 +13,8 @@
 <body>
 
   <div class="page-wrapper">
-
-
-   
-    <div class="bg-overlay">
-
-
-    </div>
-
-
+    <div class="bg-overlay"></div>
     <div class="top-logo"><a href="../Html/Index.html" aria-label="Go to Home">Feliciano</a></div>
-
-   
     <div class="left-content">
       <h1 class="hero-headline">
         From<br>
@@ -35,27 +25,17 @@
     </div>
 
     <div class="login-card">
-
-    
       <div class="card-logo">
         <a href="../Html/Index.html" aria-label="Go to Home">
           <img src="../Images/Logo.png" alt="Feliciano Logo" class="card-logo-img">
         </a>
       </div>
-
-      <!-- Script heading "Log In" -->
       <div class="card-script">Log In</div>
-
-      <!-- Welcome subtitle -->
       <p class="card-subtitle">
         Welcome To Feliciano Restaurant<br>
         Enjoy Delicious Food And Great Service.
       </p>
-
-      <!-- ── Login Form ── -->
       <form class="login-form" onsubmit="handleLogin(event)">
-
-        <!-- Role dropdown -->
         <div class="form-group">
           <label for="role">Role</label>
           <select id="role" name="role" required>
@@ -66,8 +46,6 @@
             <option value="chef">Chef</option>
           </select>
         </div>
-
-        <!-- Email input -->
         <div class="form-group">
           <label for="email">Email</label>
           <input
@@ -78,8 +56,6 @@
             required
           >
         </div>
-
-        <!-- Password input -->
         <div class="form-group">
           <label for="password">Password</label>
           <div class="password-wrapper">
@@ -96,20 +72,13 @@
             </button>
           </div>
         </div>
-
-        <!-- Submit button -->
         <button type="submit" class="btn-login">Log In</button>
-
-        <!-- Sign up link -->
         <div class="signup-row">
           <p>Don't have an account?<br>Create one and enjoy our services.</p>
           <a href="signup.html" class="btn-signup">Sign Up →</a>
         </div>
-
       </form>
-  
     </div>
   </div>
-  
 </body>
 </html>

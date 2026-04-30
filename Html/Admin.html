@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliciano Admin Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../CSS/admin.css" />
+</head>
+<body>
+  <div class="dashboard">
+    <header class="topbar">
+      <div class="brand">Feliciano</div>
+      <div class="top-right">
+        <div class="admin-title">Admin<br>Dashboard</div>
+        <div class="logout">↪</div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="tabs">
+        <div class="tab active" data-section="overview">▣ Overview</div>
+        <div class="tab" data-section="employees">👥 Employees</div>
+        <div class="tab" data-section="customer">👤 Customer</div>
+        <div class="tab" data-section="tables">▤ Tables</div>
+        <div class="tab" data-section="menu">✂ Menu Items</div>
+        <div class="tab" data-section="reports">▮ Reports</div>
+      </section>
+
+      <div class="section-content active" id="overview">
+        <section class="stats">
+          <div class="card">
+            <div class="icon-box blue">👥</div>
+            <h3>122</h3>
+            <p>Total Employees</p>
+          </div>
+          <div class="card">
+            <div class="icon-box green">▤</div>
+            <h3>8</h3>
+            <p>Available Tables</p>
+          </div>
+          <div class="card">
+            <div class="icon-box orange">✂</div>
+            <h3>45</h3>
+            <p>Menu Items</p>
+          </div>
+          <div class="card">
+            <div class="icon-box gold">💲</div>
+            <h3>$12.5K</h3>
+            <p>Monthly Revenue</p>
+          </div>
+        </section>
+
+        <section class="quick-actions">
+          <h2>Quick Actions</h2>
+          <div class="sub">Use the tabs above to manage different aspects of the restaurant</div>
+          <div class="actions-grid">
+            <div class="action-btn">👥 Add Employee</div>
+            <div class="action-btn">👤 Approve Customer</div>
+            <div class="action-btn">📋 View Reports</div>
+            <div class="action-btn">▤ Manage Tables</div>
+            <div class="action-btn">✂ Approve Menu Items</div>
+            <div class="action-btn">📑 Export Data</div>
+          </div>
+        </section>
+      </div>
+
+      <div class="section-content" id="employees">
+        <div class="employees-header">
+          <div>
+            <h2>Employee Management</h2>
+            <p class="sub">Add and manage chefs and waiters</p>
+          </div>
+          <button class="add-employee-btn">+ Add Employee</button>
+        </div>
+
+        <div class="employees-grid">
+          <div class="employee-card">
+            <div class="employee-info">
+              <h4>Marco Rossi</h4>
+              <p>marco.rossi@feliciano.com</p>
+              <div class="status-badges">
+                <span class="badge clocked-out">Clocked Out</span>
+                <span class="badge approved"> Approved</span>
+              </div>
+            </div>
+            <span class="role-badge waiter">Waiter</span>
+          </div>
+
+          <div class="employee-card">
+            <div class="employee-info">
+              <h4>Antonio Guido</h4>
+              <p>antonio.guido@feliciano.com</p>
+              <div class="status-badges">
+                <span class="badge clocked-out">Clocked Out</span>
+                <span class="badge approved">Approved</span>
+              </div>
+            </div>
+            <span class="role-badge chef">Chef</span>
+          </div>
+
+          <div class="employee-card">
+            <div class="employee-info">
+              <h4>Isabella Romano</h4>
+              <p>isabella.romano@feliciano.com</p>
+              <div class="status-badges">
+                <span class="badge clocked-out">Clocked Out</span>
+                <span class="badge approved">Approved</span>
+              </div>
+            </div>
+            <span class="role-badge waiter">Waiter</span>
+          </div>
+
+          
+          
+      </div>
+
+      <div class="section-content" id="customer">
+        <h2>Customer Management</h2>
+        <p class="sub">Coming soon...</p>
+      </div>
+
+      <div class="section-content" id="tables">
+        <h2>Table Management</h2>
+        <p class="sub">Coming soon...</p>
+      </div>
+
+      <div class="section-content" id="menu">
+        <h2>Menu Items</h2>
+        <p class="sub">Coming soon...</p>
+      </div>
+
+      <div class="section-content" id="reports">
+        <h2>Reports</h2>
+        <p class="sub">Coming soon...</p>
+      </div>
+    </main>
+
+    <div class="modal" id="addEmployeeModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Add New Employee</h3>
+          <button class="modal-close">&times;</button>
+        </div>
+
+        <form class="employee-form">
+            <div class="form-group">
+              <label>Role</label>
+              <select required>
+                <option value="">Select Role</option>
+                <option value="waiter">Waiter</option>
+                <option value="chef">Chef</option>
+              </select>
+            </div>
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter full name" required>
+          </div>
+
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="Enter email" required>
+          </div>
+
+        
+            
+
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" placeholder="Enter password" required>
+            </div>
+       
+
+          <div class="form-group">
+            <label>Certificate/License (PDF)</label>
+            <input type="file" accept=".pdf" required>
+            <small>Upload Chef Certificate or Waiter License (PDF only)</small>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-submit">Add Employee</button>
+            <button type="button" class="btn-cancel">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="../JavaScript/admin.js"></script>
+</body>
+</html>
