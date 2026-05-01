@@ -13,31 +13,19 @@
 <body>
 
   <div class="page-wrapper">
-
     <div class="bg-overlay"></div>
-
     <div class="top-logo"><a href="../Html/Index.html" aria-label="Go to Home">Feliciano</a></div>
-
-    <!-- Card is now on the LEFT -->
     <div class="login-card">
 
       <div class="card-logo">
         <img src="../Images/Logo.png" alt="Feliciano Logo" class="card-logo-img">
       </div>
-
-      <!-- Script heading -->
       <div class="card-script">Sign Up</div>
-
-      <!-- Subtitle -->
       <p class="card-subtitle">
         Join Feliciano Restaurant<br>
         Create An Account And Start Enjoying.
       </p>
-
-      <!-- Sign Up Form -->
       <form class="login-form" onsubmit="handleSignup(event)">
-
-        <!-- Role dropdown -->
         <div class="form-group">
           <label for="role">Role</label>
           <select id="role" name="role" required>
@@ -48,8 +36,6 @@
             <option value="chef">Chef</option>
           </select>
         </div>
-
-        <!-- Full Name -->
         <div class="form-group">
           <label for="fullname">Full Name</label>
           <input
@@ -60,8 +46,6 @@
             required
           >
         </div>
-
-        <!-- Email input -->
         <div class="form-group">
           <label for="email">Email</label>
           <input
@@ -72,8 +56,6 @@
             required
           >
         </div>
-
-        <!-- Password input -->
         <div class="form-group">
           <label for="password">Password</label>
           <div class="password-wrapper">
@@ -89,8 +71,6 @@
             </button>
           </div>
         </div>
-
-        <!-- Confirm Password -->
         <div class="form-group">
           <label for="confirm-password">Confirm Password</label>
           <div class="password-wrapper">
@@ -106,21 +86,13 @@
             </button>
           </div>
         </div>
-
-        <!-- Submit button -->
         <button type="submit" class="btn-login">Sign Up</button>
-
-        <!-- Log in link -->
         <div class="signup-row">
           <p>Already have an account?<br>Log in and continue.</p>
           <a href="login.html" class="btn-signup">Log In →</a>
         </div>
-
       </form>
-
     </div>
-
-    <!-- Hero text is now on the RIGHT -->
     <div class="right-content ">
       <h1 class="hero-headline">
         Where Culinary<br>

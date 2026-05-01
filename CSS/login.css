@@ -108,6 +108,19 @@
     max-width: 520px;
   }
   
+   .hero-head {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--white);
+    line-height: 1;
+    letter-spacing: 2px;
+    text-shadow: 2px 4px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  
+
   /* Large bold uppercase headline */
   .hero-headline {
     font-family: 'Bebas Neue', sans-serif;
