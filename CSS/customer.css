@@ -109,10 +109,10 @@ html, body {
 
 .category-bar {
   display: flex;
-  padding: 14px 18px;
+  padding: 14px 25px;
   border: 1px solid white;
   border-radius: 10px;
-  gap: 15px;
+  gap: 40px;
   background-color: var(--nav-bg);
   overflow-x: auto;
   flex-shrink: 0;
@@ -216,9 +216,9 @@ html, body {
   background: var(--accent);
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   padding: 6px 12px;
-  font-size: 11px;
+  font-size: 13px;
   cursor: pointer;
   transition: background 0.2s;
 }
@@ -238,8 +238,8 @@ html, body {
   flex-direction: column;
   align-self: center;
   width: 100%;
-  max-height: 450px;
-  min-height: 350px;
+  max-height: 760px;
+  min-height: 650px;
   box-shadow: var(--shadow-card);
   overflow: hidden;
 }
