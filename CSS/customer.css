@@ -1,5 +1,5 @@
 /* ==========================================
-   CSS Variables — matched to screenshot
+   CSS Variables
 ========================================== */
 :root {
   --bg-page:        #51483b;
@@ -24,7 +24,7 @@
 }
 
 /* ==========================================
-   Reset & Base Layout (FIXED FOR SCROLLING)
+   Reset & Base Layout
 ========================================== */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -33,11 +33,11 @@
 }
 
 html, body {
-  height: 100vh; /* Exactly the height of the screen */
-  font-family: 'Inter', sans-serif;
+  height: 100vh;
+  font-family: 'DM Sans', sans-serif;
   background-color: var(--bg-page);
   color: var(--text-primary);
-  overflow: hidden; /* This removes the main page scrollbar */
+  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
@@ -52,7 +52,7 @@ html, body {
   border-radius: 10px;
   margin: 20px 18px 0;
   box-shadow: var(--shadow-nav);
-  flex-shrink: 0; /* Prevents navbar from squishing */
+  flex-shrink: 0;
 }
 
 .nav-links {
@@ -81,16 +81,20 @@ html, body {
   border-color: var(--accent);
 }
 
+.nav-item:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 /* ==========================================
-   Main Layout (FIXED HEIGHT)
+   Main Layout
 ========================================== */
 .main-layout {
   display: grid;
-  grid-template-columns: 1fr 320px; /* Slightly wider for the cart */
+  grid-template-columns: 1fr 320px;
   gap: 18px;
   padding: 16px 18px 20px;
-  flex: 1; /* Fills the rest of the screen below navbar */
-  min-height: 0; /* Crucial for internal scrolling to work */
+  flex: 1;
+  min-height: 0;
 }
 
 /* ==========================================
@@ -100,7 +104,7 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  min-height: 0; /* Allows children to be scrollable */
+  min-height: 0;
 }
 
 .category-bar {
@@ -124,6 +128,7 @@ html, body {
   border-radius: 5px;
   cursor: pointer;
   white-space: nowrap;
+  transition: all 0.2s;
 }
 
 .cat-btn.active {
@@ -131,14 +136,18 @@ html, body {
   border-color: var(--accent);
 }
 
+.cat-btn:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 /* ==========================================
-   Menu Grid (THE SCROLLABLE AREA)
+   Menu Grid (Scrollable)
 ========================================== */
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
-  overflow-y: auto; /* Only this part scrolls */
+  overflow-y: auto;
   padding-right: 5px;
 }
 
@@ -178,6 +187,12 @@ html, body {
   flex: 1;
 }
 
+.card-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .card-name { font-size: 13px; font-weight: 600; }
 .card-price { font-size: 13px; font-weight: 700; color: var(--accent); }
 .card-desc { font-size: 11px; color: var(--text-muted); flex: 1; }
@@ -189,6 +204,14 @@ html, body {
   margin-top: 8px;
 }
 
+.card-tag {
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
 .add-btn {
   background: var(--accent);
   color: #fff;
@@ -197,10 +220,15 @@ html, body {
   padding: 6px 12px;
   font-size: 11px;
   cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-btn:hover {
+  background: var(--accent-light);
 }
 
 /* ==========================================
-   Cart Panel (CENTERED & SIZED)
+   Cart Panel (Right)
 ========================================== */
 .cart-panel {
   background: var(--cart-bg);
@@ -208,13 +236,10 @@ html, body {
   border: 1.5px solid white;
   display: flex;
   flex-direction: column;
-  
-  /* Centering Logic */
-  align-self: center;      /* Centers it vertically in the grid row */
-  width: 100%;             /* Fits the 320px column */
-  max-height: 450px;       /* Keeps it a nice "Middle" size */
+  align-self: center;
+  width: 100%;
+  max-height: 450px;
   min-height: 350px;
-  
   box-shadow: var(--shadow-card);
   overflow: hidden;
 }
@@ -225,6 +250,12 @@ html, body {
   text-align: center;
 }
 
+.cart-icon {
+  font-size: 20px;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
 .cart-title {
   font-size: 24px;
   font-weight: 700;
@@ -232,6 +263,11 @@ html, body {
   align-items: center;
   justify-content: center;
   gap: 8px;
+}
+
+.cart-title span {
+  color: var(--text-muted);
+  font-size: 18px;
 }
 
 .cart-empty {
@@ -248,73 +284,3 @@ html, body {
   font-size: 40px;
   color: var(--accent);
 }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #000;
-      color: #fff;
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
-
-    .dashboard {
-      min-height: 100vh;
-      background:
-        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.7)),
-        url('../Images/customer-bg.jpg') center/cover no-repeat;
-    }
-
-    .topbar {
-      height: 78px;
-      background: linear-gradient(90deg, #3d3228, #201a14 55%, #3d3228);
-      border-bottom: 1px solid rgba(255,255,255,.08);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 50px;
-    }
-
-    .brand {
-      border: 1px solid rgba(255,255,255,.45);
-      padding: 9px 14px;
-      font-size: 15px;
-      font-weight: 600;
-      line-height: 1;
-    }
-
-    .top-right {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-    }
-
-    .admin-title {
-      text-align: right;
-      font-size: 14px;
-      font-weight: 700;
-      line-height: 1.2;
-    }
-
-    .logout {
-      width: 32px;
-      height: 32px;
-      border: 1px solid rgba(224,194,143,.6);
-      border-radius: 6px;
-      display: grid;
-      place-items: center;
-      color: #e0c28f;
-      font-size: 18px;
-    }
-
-    .logout::before {
-      content: "";
-      width: 18px;
-      height: 18px;
-      background-color: #e0c28f;
-      -webkit-mask: url('../Images/logout.png') no-repeat center / contain;
-      mask: url('../Images/logout.png') no-repeat center / contain;
-      display: block;
-    }
-
-    .logout img {
-      display: none;
-    }
