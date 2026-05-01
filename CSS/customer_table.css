@@ -1,0 +1,238 @@
+/* ==========================================
+   CSS Variables
+========================================== */
+:root {
+    --bg-page:        #51483b;
+    --bg-card:        #6e6050;
+    --accent:         #c8a96a;
+    --accent-light:   #dbbf85;
+    --text-primary:   #f0e8d8;
+    --text-secondary: #c8b898;
+    --text-muted:     #9a8a78;
+    --nav-bg:         #625a4e;
+    --nav-text:       #ffffff;
+    --shadow-nav:     0 2px 8px rgba(0,0,0,0.15);
+    --shadow-card:    0 2px 12px rgba(0,0,0,0.28);
+    --radius-card:    10px;
+  }
+  
+  /* ==========================================
+     Reset & Base
+  ========================================== */
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    min-height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+  }
+  
+  /* ==========================================
+     Navbar
+  ========================================== */
+  .navbar {
+    background-color: var(--nav-bg);
+    border: 1.5px solid white;
+    padding: 16px 30px;
+    border-radius: 10px;
+    margin: 20px ;
+    box-shadow: var(--shadow-nav);
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .nav-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--nav-text);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 28px;
+    border-radius: 6px;
+    border: 1px solid white;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  
+  .nav-item.active {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  
+  .nav-item:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+  
+  /* ==========================================
+     Main Content
+  ========================================== */
+  .main-content {
+    padding: 28px 24px;
+    max-width: 860px;
+  }
+  
+  /* ==========================================
+     Page Header
+  ========================================== */
+  .page-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+  
+  .page-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.2;
+  }
+  
+  .page-subtitle {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-top: 6px;
+    font-weight: 400;
+  }
+  
+  .book-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+    border: 1.5px solid white;
+    border-radius: 8px;
+    padding: 10px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+  
+  .book-btn:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+  }
+  
+  /* ==========================================
+     Section Title
+  ========================================== */
+  .section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+  }
+  
+  /* ==========================================
+     Reservations List
+  ========================================== */
+  .reservations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  /* ==========================================
+     Reservation Card
+  ========================================== */
+  .reservation-card {
+    background-color: var(--bg-card);
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    border-radius: var(--radius-card);
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    height: 160px;
+    gap: 20px;
+    box-shadow: var(--shadow-card);
+  }
+  
+  /* Top row: table name + badge */
+  .card-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .table-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+  
+  /* Status Badges */
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: 20px;
+  }
+  
+  .status-badge.confirmed {
+    background-color: #d4edda;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+  }
+  
+  .status-badge.pending {
+    background-color: #fff8e1;
+    color: #9a7500;
+    border: 1px solid #ffe082;
+  }
+  
+  /* Meta info: date, guests */
+  .card-meta {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+  
+  .card-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .card-meta i {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+  
+  /* Confirmation message bar */
+  .confirmation-msg {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #a6d6ba;
+    color: #1b5e20;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 16px;
+    border-radius: 6px;
+  }
+  
+  .confirmation-msg i {
+    color: #2e7d32;
+    font-size: 14px;
+  }
