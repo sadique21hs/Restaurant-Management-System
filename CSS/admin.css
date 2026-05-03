@@ -914,8 +914,13 @@
 
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 260px));
   gap: 18px 22px;
+  justify-content: start;
+}
+
+.menu-grid.approved {
+  gap: 22px 26px;
 }
 
 .menu-card {
