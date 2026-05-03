@@ -84,6 +84,9 @@
 
     .tabs {
       display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      row-gap: 10px;
       gap: 18px;
       padding: 14px 16px;
       border: 1px solid rgba(255,255,255,.65);
@@ -139,9 +142,31 @@
       border-radius: 7px;
       display: grid;
       place-items: center;
-      font-size: 15px;
       margin-bottom: 12px;
       background: rgba(255,255,255,.08);
+    }
+
+    .icon-box img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+      filter: brightness(0) saturate(100%);
+    }
+
+    .icon-box.blue img {
+      filter: brightness(0) saturate(100%) invert(76%) sepia(18%) saturate(396%) hue-rotate(153deg) brightness(96%) contrast(90%);
+    }
+
+    .icon-box.green img {
+      filter: brightness(0) saturate(100%) invert(49%) sepia(70%) saturate(398%) hue-rotate(74deg) brightness(95%) contrast(90%);
+    }
+
+    .icon-box.orange img {
+      filter: brightness(0) saturate(100%) invert(56%) sepia(55%) saturate(2474%) hue-rotate(342deg) brightness(93%) contrast(92%);
+    }
+
+    .icon-box.gold img {
+      filter: brightness(0) saturate(100%) invert(74%) sepia(37%) saturate(766%) hue-rotate(357deg) brightness(94%) contrast(88%);
     }
 
     .blue { color: #8fb7c8; }
@@ -197,6 +222,13 @@
       padding: 0 14px;
       font-size: 14px;
       font-weight: 600;
+    }
+
+    .action-btn img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
     }
 
     .section-content {
@@ -635,7 +667,8 @@
 }
 
 .form-group input,
-.form-group select {
+.form-group select,
+.form-group textarea {
   width: 100%;
   padding: 11px 12px;
   background: rgba(255, 255, 255, 0.94);
@@ -644,6 +677,11 @@
   color: #222;
   font-size: 13px;
   transition: all 0.3s ease;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 90px;
 }
 .form-row-flex {
   display: grid;
@@ -694,6 +732,17 @@
 .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.14);
   border-color: rgba(199, 164, 118, 0.4);
+}
+
+.menu-edit-value {
+  width: 100%;
+  padding: 11px 12px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
 }
 .tables-panel {
   margin-top: 18px;
@@ -900,8 +949,13 @@
 
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 260px));
   gap: 18px 22px;
+  justify-content: start;
+}
+
+.menu-grid.approved {
+  gap: 22px 26px;
 }
 
 .menu-card {
@@ -961,14 +1015,17 @@
 .menu-bottom-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .menu-action-row {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .menu-tag {
@@ -979,6 +1036,24 @@
   border: 1px solid rgba(255,255,255,.18);
   background: rgba(255,255,255,.08);
   color: rgba(255,255,255,.88);
+}
+
+.menu-edit-btn {
+  height: 24px;
+  padding: 0 10px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 800;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,.45);
+  background: rgba(255,255,255,.12);
+  color: rgba(255,255,255,.92);
+  transition: all 0.25s ease;
+}
+
+.menu-edit-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0,0,0,.25);
 }
 
 .menu-approve-btn {
@@ -992,6 +1067,12 @@
   background: rgba(199,164,118,.14);
   color: rgba(255,255,255,.92);
   transition: all 0.25s ease;
+}
+
+.menu-edit-btn,
+.menu-approve-btn,
+.menu-reject-btn {
+  white-space: nowrap;
 }
 
 .menu-approve-btn:hover {
