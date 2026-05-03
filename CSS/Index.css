@@ -367,6 +367,7 @@
     padding: 70px 24px 90px;
   }
 
+
   .menu-script {
     font-family: 'Great Vibes', cursive;
     font-size: clamp(3.4rem, 6.8vw, 6rem);
@@ -461,6 +462,7 @@
   .menu-order-btn {
     display: inline-block;
     width: fit-content;
+    border: none;
     text-decoration: none;
     background: var(--gold);
     color: #ffffff;
@@ -468,6 +470,8 @@
     font-weight: 700;
     padding: 10px 16px;
     transition: filter 0.25s ease;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
   }
 
   .menu-order-btn:hover {
