@@ -1,24 +1,19 @@
-// ================= TAB SWITCHING =================
 
 const tabs = document.querySelectorAll('.tab');
 const sections = document.querySelectorAll('.section-content');
 
 tabs.forEach(tab => {
   tab.addEventListener('click', () => {
-    const sectionId = tab.getAttribute('data-section'); // কোন section open হবে
-
-    // সব active class remove
+    const sectionId = tab.getAttribute('data-section'); 
     tabs.forEach(t => t.classList.remove('active'));
     sections.forEach(s => s.classList.remove('active'));
 
-    // selected tab ও section active করা
     tab.classList.add('active');
     document.getElementById(sectionId).classList.add('active');
   });
 });
 
-
-// ================= ADD EMPLOYEE MODAL =================
+//-----------
 
 const modal = document.getElementById('addEmployeeModal');
 const addEmployeeBtn = document.querySelector('.add-employee-btn');
@@ -53,8 +48,7 @@ if (modalCancelBtn) {
   });
 }
 
-// ================= ADD TABLE MODAL =================
-
+//---
 const tableModal = document.getElementById('addTableModal');
 
 const openTableModal = () => {
@@ -87,8 +81,7 @@ if (addTableBtn) {
   });
 }
 
-// ================= EDIT MENU MODAL =================
-
+//----
 const editMenuModal = document.getElementById('editMenuModal');
 const editMenuForm = document.getElementById('editMenuForm');
 
