@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Restaurant Dashboard</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@300;400;500;600&display=swap"
-    rel="stylesheet" />
+  <title>Feliciano — Customer Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="../CSS/customer.css">
+  <link rel="stylesheet" href="../CSS/customer.css" />
 </head>
 
 <body>
-
-  <!-- ============================================================
-       TOP NAVIGATION
-  ============================================================ -->
   <div class="dashboard">
+
+    <!-- ── Topbar ───────────────────────────────── -->
     <header class="topbar">
       <div class="brand">Feliciano</div>
       <div class="top-right">
-        <div class="admin-title">Customer<br>Dashboard</div>
-        <div class="logout">
-        </div>
+        <div class="dashboard-label">Customer<br>Dashboard</div>
+        <button class="logout-btn" aria-label="Logout">
+          <i class="fas fa-right-from-bracket"></i>
+        </button>
       </div>
     </header>
 
-    <header class="navbar">
-      <nav class="nav-links">
+    <!-- ── Outer glass wrapper ───────────────────── -->
+    <div class="outer-wrapper">
+
+      <!-- ── Navbar ─────────────────────────────── -->
+      <nav class="navbar">
         <a href="#" class="nav-item active">
           <i class="fas fa-utensils"></i> Menu Items
         </a>
@@ -42,213 +41,197 @@
           <i class="far fa-user-circle"></i> Profile
         </a>
       </nav>
-    </header>
 
-    <!-- ============================================================
-         MAIN LAYOUT
-    ============================================================ -->
-    <main class="main-layout">
+      <!-- ── Main Layout ──────────────────────────── -->
+      <main class="main-layout">
 
-      <!-- LEFT: Menu Section -->
-      <section class="menu-section">
+        <!-- Left: Menu Section -->
+        <section class="menu-section">
 
-        <!-- Category Filters -->
-        <div class="category-bar">
-          <span class="cat-btn active">All</span>
-          <span class="cat-btn">Pizza</span>
-          <span class="cat-btn">Burgers</span>
-          <span class="cat-btn">Salads</span>
-          <span class="cat-btn">Main Course</span>
-          <span class="cat-btn">Pasta</span>
-          <span class="cat-btn">Desserts</span>
-          <span class="cat-btn">Appetizers</span>
-        </div>
-
-        <!-- Menu Grid -->
-        <div class="menu-grid">
-
-          <!-- CARD 1 -->
-          <div class="menu-card">
-            <div class="card-img" style="background-image: url('../Images/Customer/1.png')"></div>
-            <div class="card-body">
-              <div class="card-title-row">
-                <span class="card-name">Margherita Pizza</span>
-                <span class="card-price">$12.99</span>
-              </div>
-              <p class="card-desc">Classic tomato sauce, mozzarella, and fresh basil</p>
-              <div class="card-footer">
-                <span class="card-tag">Pizza</span>
-                <button class="add-btn">Add To Cart</button>
-              </div>
-            </div>
+          <!-- Category Filter Bar -->
+          <div class="category-bar">
+            <span class="cat-btn active">All</span>
+            <span class="cat-btn">Pizza</span>
+            <span class="cat-btn">Burgers</span>
+            <span class="cat-btn">Salads</span>
+            <span class="cat-btn">Main Course</span>
+            <span class="cat-btn">Pasta</span>
+            <span class="cat-btn">Desserts</span>
+            <span class="cat-btn">Appetizers</span>
           </div>
 
-          <!-- CARD 2 -->
-          <div class="menu-card">
-            <div class="card-img" style="background-image: url('../Images/Customer/2.png')"></div>
-            <div class="card-body">
-              <div class="card-title-row">
-                <span class="card-name">Margherita Pizza</span>
-                <span class="card-price">$12.99</span>
-              </div>
-              <p class="card-desc">Classic tomato sauce, mozzarella, and fresh basil</p>
-              <div class="card-footer">
-                <span class="card-tag">Pizza</span>
-                <button class="add-btn">Add To Cart</button>
+          <!-- Menu Grid -->
+          <div class="menu-grid">
+
+            <div class="menu-card">
+              <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&q=80')"></div>
+              <div class="card-body">
+                <div class="card-title-row">
+                  <span class="card-name">Margherita Pizza</span>
+                  <span class="card-price">$12.99</span>
+                </div>
+                <p class="card-desc">Classic tomato sauce, mozzarella, and fresh basil</p>
+                <div class="card-footer">
+                  <span class="card-tag">Pizza</span>
+                  <button class="add-btn">Add To Cart</button>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- CARD 3 -->
-          <div class="menu-card">
-            <div class="card-img" style="background-image: url('../Images/Customer/3.png')"></div>
-            <div class="card-body">
-              <div class="card-title-row">
-                <span class="card-name">Margherita Pizza</span>
-                <span class="card-price">$12.99</span>
-              </div>
-              <p class="card-desc">Classic tomato sauce, mozzarella, and fresh basil</p>
-              <div class="card-footer">
-                <span class="card-tag">Pizza</span>
-                <button class="add-btn">Add To Cart</button>
+            <div class="menu-card">
+              <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80')"></div>
+              <div class="card-body">
+                <div class="card-title-row">
+                  <span class="card-name">Classic Burger</span>
+                  <span class="card-price">$14.50</span>
+                </div>
+                <p class="card-desc">Juicy beef patty with lettuce, tomato and house sauce</p>
+                <div class="card-footer">
+                  <span class="card-tag">Burgers</span>
+                  <button class="add-btn">Add To Cart</button>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- CARD 4 -->
-          <div class="menu-card">
-            <div class="card-img" style="background-image: url('../Images/Customer/4.png')"></div>
-            <div class="card-body">
-              <div class="card-title-row">
-                <span class="card-name">Margherita Pizza</span>
-                <span class="card-price">$12.99</span>
-              </div>
-              <p class="card-desc">Classic tomato sauce, mozzarella, and fresh basil</p>
-              <div class="card-footer">
-                <span class="card-tag">Pizza</span>
-                <button class="add-btn">Add To Cart</button>
+            <div class="menu-card">
+              <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&q=80')"></div>
+              <div class="card-body">
+                <div class="card-title-row">
+                  <span class="card-name">Garden Salad</span>
+                  <span class="card-price">$9.99</span>
+                </div>
+                <p class="card-desc">Fresh greens, cherry tomatoes, cucumber, lemon dressing</p>
+                <div class="card-footer">
+                  <span class="card-tag">Salads</span>
+                  <button class="add-btn">Add To Cart</button>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- CARD 5 -->
-          <div class="menu-card">
-            <div class="card-img" style="background-image: url('../Images/Customer/5.png')"></div>
-            <div class="card-body">
-              <div class="card-title-row">
-                <span class="card-name">Margherita Pizza</span>
-                <span class="card-price">$12.99</span>
-              </div>
-              <p class="card-desc">Classic tomato sauce, mozzarella, and fresh basil</p>
-              <div class="card-footer">
-                <span class="card-tag">Pizza</span>
-                <button class="add-btn">Add To Cart</button>
+            <div class="menu-card">
+              <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&q=80')"></div>
+              <div class="card-body">
+                <div class="card-title-row">
+                  <span class="card-name">Grilled Salmon</span>
+                  <span class="card-price">$18.00</span>
+                </div>
+                <p class="card-desc">Atlantic salmon, herb butter, seasonal vegetables</p>
+                <div class="card-footer">
+                  <span class="card-tag">Main Course</span>
+                  <button class="add-btn">Add To Cart</button>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- CARD 6 -->
-          <div class="menu-card">
-            <div class="card-img" style="background-image: url('../Images/Customer/6.png')"></div>
-            <div class="card-body">
-              <div class="card-title-row">
-                <span class="card-name">Margherita Pizza</span>
-                <span class="card-price">$12.99</span>
-              </div>
-              <p class="card-desc">Classic tomato sauce, mozzarella, and fresh basil</p>
-              <div class="card-footer">
-                <span class="card-tag">Pizza</span>
-                <button class="add-btn">Add To Cart</button>
+            <div class="menu-card">
+              <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=400&q=80')"></div>
+              <div class="card-body">
+                <div class="card-title-row">
+                  <span class="card-name">Penne Arrabbiata</span>
+                  <span class="card-price">$13.50</span>
+                </div>
+                <p class="card-desc">Spicy tomato sauce with garlic and fresh parsley</p>
+                <div class="card-footer">
+                  <span class="card-tag">Pasta</span>
+                  <button class="add-btn">Add To Cart</button>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- CARD 7 -->
-          <div class="menu-card">
-            <div class="card-img" style="background-image: url('../Images/Customer/7.png')"></div>
-            <div class="card-body">
-              <div class="card-title-row">
-                <span class="card-name">Margherita Pizza</span>
-                <span class="card-price">$12.99</span>
-              </div>
-              <p class="card-desc">Classic tomato sauce, mozzarella, and fresh basil</p>
-              <div class="card-footer">
-                <span class="card-tag">Pizza</span>
-                <button class="add-btn">Add To Cart</button>
+            <div class="menu-card">
+              <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&q=80')"></div>
+              <div class="card-body">
+                <div class="card-title-row">
+                  <span class="card-name">Tiramisu</span>
+                  <span class="card-price">$7.50</span>
+                </div>
+                <p class="card-desc">Classic Italian espresso dessert with mascarpone</p>
+                <div class="card-footer">
+                  <span class="card-tag">Desserts</span>
+                  <button class="add-btn">Add To Cart</button>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- CARD 8 -->
-          <div class="menu-card">
-            <div class="card-img" style="background-image: url('../Images/Customer/8.png')"></div>
-            <div class="card-body">
-              <div class="card-title-row">
-                <span class="card-name">Margherita Pizza</span>
-                <span class="card-price">$12.99</span>
-              </div>
-              <p class="card-desc">Classic tomato sauce, mozzarella, and fresh basil</p>
-              <div class="card-footer">
-                <span class="card-tag">Pizza</span>
-                <button class="add-btn">Add To Cart</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- CARD 9 -->
-          <div class="menu-card">
-            <div class="card-img" style="background-image: url('../Images/Customer/9.png')"></div>
-            <div class="card-body">
-              <div class="card-title-row">
-                <span class="card-name">Margherita Pizza</span>
-                <span class="card-price">$12.99</span>
-              </div>
-              <p class="card-desc">Classic tomato sauce, mozzarella, and fresh basil</p>
-              <div class="card-footer">
-                <span class="card-tag">Pizza</span>
-                <button class="add-btn">Add To Cart</button>
+            <div class="menu-card">
+              <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=400&q=80')"></div>
+              <div class="card-body">
+                <div class="card-title-row">
+                  <span class="card-name">Bruschetta</span>
+                  <span class="card-price">$8.99</span>
+                </div>
+                <p class="card-desc">Toasted bread, fresh tomatoes, garlic, extra virgin olive oil</p>
+                <div class="card-footer">
+                  <span class="card-tag">Appetizers</span>
+                  <button class="add-btn">Add To Cart</button>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- CARD 10 -->
-          <div class="menu-card">
-            <div class="card-img" style="background-image: url('../Images/Customer/10.png')"></div>
-            <div class="card-body">
-              <div class="card-title-row">
-                <span class="card-name">Margherita Pizza</span>
-                <span class="card-price">$12.99</span>
-              </div>
-              <p class="card-desc">Classic tomato sauce, mozzarella, and fresh basil</p>
-              <div class="card-footer">
-                <span class="card-tag">Pizza</span>
-                <button class="add-btn">Add To Cart</button>
+            <div class="menu-card">
+              <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=400&q=80')"></div>
+              <div class="card-body">
+                <div class="card-title-row">
+                  <span class="card-name">Pepperoni Pizza</span>
+                  <span class="card-price">$15.99</span>
+                </div>
+                <p class="card-desc">Rich tomato base, pepperoni, mozzarella and oregano</p>
+                <div class="card-footer">
+                  <span class="card-tag">Pizza</span>
+                  <button class="add-btn">Add To Cart</button>
+                </div>
               </div>
             </div>
+
+            <div class="menu-card">
+              <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&q=80')"></div>
+              <div class="card-body">
+                <div class="card-title-row">
+                  <span class="card-name">Caesar Salad</span>
+                  <span class="card-price">$11.00</span>
+                </div>
+                <p class="card-desc">Romaine, parmesan, croutons and anchovy caesar dressing</p>
+                <div class="card-footer">
+                  <span class="card-tag">Salads</span>
+                  <button class="add-btn">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1481931715705-36f5f759cf47?w=400&q=80')"></div>
+              <div class="card-body">
+                <div class="card-title-row">
+                  <span class="card-name">Chocolate Fondant</span>
+                  <span class="card-price">$6.50</span>
+                </div>
+                <p class="card-desc">Warm molten chocolate cake served with vanilla ice cream</p>
+                <div class="card-footer">
+                  <span class="card-tag">Desserts</span>
+                  <button class="add-btn">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+
           </div>
+          <!-- /menu-grid -->
+        </section>
 
-        </div>
-        <!-- End Menu Grid -->
-      </section>
+        <!-- Right: Cart Panel -->
+        <aside class="cart-panel">
+          <div class="cart-header">
+            <i class="fas fa-shopping-cart cart-icon"></i>
+            <h2 class="cart-title">Your Cart<span>(0)</span></h2>
+          </div>
+          <div class="cart-empty">
+            <p>Cart is empty</p>
+          </div>
+        </aside>
 
-      <!-- RIGHT: Cart Panel -->
-      <aside class="cart-panel">
-        <div class="cart-header">
-          <i class="fas fa-shopping-cart cart-icon"></i>
-          <h2 class="cart-title">Your Cart <span>(0)</span></h2>
-        </div>
-        <div class="cart-empty">
-          <i class="fas fa-shopping-basket cart-empty-icon"></i>
-          <p>Cart is empty</p>
-        </div>
-      </aside>
-
-    </main>
+      </main>
+    </div>
+    <!-- /outer-wrapper -->
 
   </div>
-
-
-
 </body>
-
 </html>
