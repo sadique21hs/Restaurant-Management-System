@@ -14,8 +14,7 @@ tabs.forEach(tab => {
 });
 const modal = document.getElementById('addEmployeeModal');
 const addEmployeeBtn = document.querySelector('.add-employee-btn');
-const modalClose = document.querySelector('.modal-close');
-const btnCancel = document.querySelector('.btn-cancel');
+const modalClose = modal ? modal.querySelector('.modal-close') : null;
 
 const openModal = () => {
   if (!modal) return;
@@ -39,11 +38,6 @@ if (modalClose) {
   });
 }
 
-if (btnCancel) {
-  btnCancel.addEventListener('click', () => {
-    closeModal();
-  });
-}
 
 const modalCancelBtn = document.querySelector('#addEmployeeModal .btn-secondary, #addEmployeeModal button[type="reset"]');
 if (modalCancelBtn) {
@@ -64,6 +58,7 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     closeModal();
     closeTableModal();
+    closeEditMenuModal();
   }
 });
 const tableModal = document.getElementById('addTableModal');
@@ -99,6 +94,58 @@ if (addTableBtn) {
     openTableModal();
   });
 }
+
+const editMenuModal = document.getElementById('editMenuModal');
+const editMenuPriceValue = document.getElementById('editMenuPrice');
+const editMenuNameValue = document.getElementById('editMenuName');
+let activeMenuCard = null;
+
+const openEditMenuModal = (menuCard) => {
+  if (!editMenuModal || !editMenuPriceValue) return;
+  activeMenuCard = menuCard;
+  const priceEl = menuCard ? menuCard.querySelector('.menu-price') : null;
+  const nameEl = menuCard ? menuCard.querySelector('.menu-name') : null;
+  const currentPrice = priceEl ? priceEl.textContent.replace('$', '').trim() : '';
+  if (editMenuNameValue) {
+    editMenuNameValue.textContent = nameEl ? nameEl.textContent.trim() : '-';
+  }
+  editMenuPriceValue.textContent = currentPrice ? `$${currentPrice}` : '-';
+  editMenuModal.classList.add('active');
+};
+
+const closeEditMenuModal = () => {
+  if (!editMenuModal) return;
+  editMenuModal.classList.remove('active');
+  activeMenuCard = null;
+};
+
+document.querySelectorAll('.menu-edit-btn').forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    const menuCard = e.currentTarget.closest('.menu-card');
+    if (menuCard) {
+      openEditMenuModal(menuCard);
+    }
+  });
+});
+
+if (editMenuModal) {
+  const editCloseBtn = editMenuModal.querySelector('.modal-close');
+  if (editCloseBtn) {
+    editCloseBtn.addEventListener('click', () => closeEditMenuModal());
+  }
+
+  const cancelEditBtn = editMenuModal.querySelector('[data-action="cancel-edit"]');
+  if (cancelEditBtn) {
+    cancelEditBtn.addEventListener('click', () => closeEditMenuModal());
+  }
+
+  editMenuModal.addEventListener('click', (e) => {
+    if (e.target === editMenuModal) {
+      closeEditMenuModal();
+    }
+  });
+}
+
 
 
 

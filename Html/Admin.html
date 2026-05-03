@@ -226,7 +226,7 @@
             <div class="menu-grid" id="pendingMenuItems">
               <div class="menu-card pending" data-menu-id="pending-1">
                 <div class="menu-thumb">
-                  <img src="../Images/food/pizza.png" alt="Margherita Pizza" />
+                  <img src="../Images/food/main%20cross/pexels-campbell-downie-3549547-5317239.jpg" alt="Margherita Pizza" />
                 </div>
                 <div class="menu-card-body">
                   <div class="menu-title-row">
@@ -237,6 +237,7 @@
                   <div class="menu-bottom-row">
                     <span class="menu-tag">Pizza</span>
                     <div class="menu-action-row">
+                      <button type="button" class="menu-edit-btn" data-action="edit-menu">Edit</button>
                       <button type="button" class="menu-approve-btn" data-action="approve-menu">Approved</button>
                       <button type="button" class="menu-reject-btn" data-action="reject-menu">Reject</button>
                     </div>
@@ -254,7 +255,7 @@
             <div class="menu-grid approved" id="approvedMenuItems">
               <div class="menu-card approved" data-menu-id="approved-1">
                 <div class="menu-thumb">
-                  <img src="../Images/food/pizza.png" alt="Margherita Pizza" />
+                  <img src="../Images/food/main%20cross/pexels-ionela-mat-268382825-19671341.jpg" alt="Margherita Pizza" />
                 </div>
                 <div class="menu-check" aria-hidden="true">✓</div>
                 <div class="menu-card-body">
@@ -271,7 +272,7 @@
 
               <div class="menu-card approved" data-menu-id="approved-2">
                 <div class="menu-thumb">
-                  <img src="../Images/food/pizza.png" alt="Margherita Pizza" />
+                  <img src="../Images/food/main%20cross/pexels-julia-chalova-10303257.jpg" alt="Margherita Pizza" />
                 </div>
                 <div class="menu-check" aria-hidden="true">✓</div>
                 <div class="menu-card-body">
@@ -288,7 +289,7 @@
 
               <div class="menu-card approved" data-menu-id="approved-3">
                 <div class="menu-thumb">
-                  <img src="../Images/food/pizza.png" alt="Margherita Pizza" />
+                  <img src="../Images/food/main%20cross/pexels-lucas-porras-1937324539-35723478.jpg" alt="Margherita Pizza" />
                 </div>
                 <div class="menu-check" aria-hidden="true">✓</div>
                 <div class="menu-card-body">
@@ -458,6 +459,30 @@
         <button type="reset" class="btn-secondary">Cancel</button>
       </div>
 
+    </form>
+  </div>
+</div>
+
+<div class="modal" id="editMenuModal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3>Edit Menu Price</h3>
+      <button type="button" class="modal-close" aria-label="Close">&times;</button>
+    </div>
+
+    <form id="editMenuForm" class="employee-form">
+      <div class="form-group full-width">
+        <label>Item</label>
+        <div class="menu-edit-value" id="editMenuName">-</div>
+      </div>
+      <div class="form-group full-width">
+        <label>Price</label>
+        <div class="menu-edit-value" id="editMenuPrice">-</div>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn-secondary" data-action="cancel-edit">Cancel</button>
+      </div>
     </form>
   </div>
 </div>
