@@ -142,9 +142,31 @@
       border-radius: 7px;
       display: grid;
       place-items: center;
-      font-size: 15px;
       margin-bottom: 12px;
       background: rgba(255,255,255,.08);
+    }
+
+    .icon-box img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+      filter: brightness(0) saturate(100%);
+    }
+
+    .icon-box.blue img {
+      filter: brightness(0) saturate(100%) invert(76%) sepia(18%) saturate(396%) hue-rotate(153deg) brightness(96%) contrast(90%);
+    }
+
+    .icon-box.green img {
+      filter: brightness(0) saturate(100%) invert(49%) sepia(70%) saturate(398%) hue-rotate(74deg) brightness(95%) contrast(90%);
+    }
+
+    .icon-box.orange img {
+      filter: brightness(0) saturate(100%) invert(56%) sepia(55%) saturate(2474%) hue-rotate(342deg) brightness(93%) contrast(92%);
+    }
+
+    .icon-box.gold img {
+      filter: brightness(0) saturate(100%) invert(74%) sepia(37%) saturate(766%) hue-rotate(357deg) brightness(94%) contrast(88%);
     }
 
     .blue { color: #8fb7c8; }
@@ -200,6 +222,13 @@
       padding: 0 14px;
       font-size: 14px;
       font-weight: 600;
+    }
+
+    .action-btn img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+      filter: none;
     }
 
     .section-content {
