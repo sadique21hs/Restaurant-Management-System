@@ -465,27 +465,47 @@
 
 <div class="modal" id="editMenuModal">
   <div class="modal-content">
+
     <div class="modal-header">
-      <h3>Edit Menu Price</h3>
+      <h3>Edit Menu Item</h3>
       <button type="button" class="modal-close" aria-label="Close">&times;</button>
     </div>
 
     <form id="editMenuForm" class="employee-form">
-      <div class="form-group full-width">
-        <label>Item</label>
-        <div class="menu-edit-value" id="editMenuName">-</div>
+
+      <div class="form-row-flex">
+        <div class="form-group">
+          <label for="editMenuName">Item Name</label>
+          <input type="text" id="editMenuName" name="editMenuName" required>
+        </div>
+
+        <div class="form-group">
+          <label for="editMenuPrice">Price</label>
+          <input type="text" id="editMenuPrice" name="editMenuPrice" placeholder="$12.99" required>
+        </div>
       </div>
+
+      <div class="form-row-flex">
+        <div class="form-group">
+          <label for="editMenuTag">Category</label>
+          <input type="text" id="editMenuTag" name="editMenuTag" required>
+        </div>
+      </div>
+
       <div class="form-group full-width">
-        <label>Price</label>
-        <div class="menu-edit-value" id="editMenuPrice">-</div>
+        <label for="editMenuDesc">Description</label>
+        <textarea id="editMenuDesc" name="editMenuDesc" rows="3" required></textarea>
       </div>
 
       <div class="btn-row">
-        <button type="button" class="btn-secondary" data-action="cancel-edit">Cancel</button>
+        <button type="submit" class="btn-primary">Save</button>
+        <button type="reset" class="btn-secondary">Cancel</button>
       </div>
+
     </form>
   </div>
 </div>
+
 </div>
 
   <script src="../JavaScript/admin.js"></script>

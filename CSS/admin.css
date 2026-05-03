@@ -638,7 +638,8 @@
 }
 
 .form-group input,
-.form-group select {
+.form-group select,
+.form-group textarea {
   width: 100%;
   padding: 11px 12px;
   background: rgba(255, 255, 255, 0.94);
@@ -647,6 +648,11 @@
   color: #222;
   font-size: 13px;
   transition: all 0.3s ease;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 90px;
 }
 .form-row-flex {
   display: grid;
