@@ -10,7 +10,7 @@
   --text-muted:     #9a8a78;
   --glass-bg:       rgba(40,42,38,0.22);
   --glass-border:   rgba(255,255,255,0.10);
-  --glass-blur:     blur(10px);
+  --glass-blur:     blur(5px);
   --glass-shadow:   0 12px 40px rgba(0,0,0,0.35);
   --card-bg:        rgba(40,42,38,0.45);
   --nav-bg:         rgba(20,22,18,0.45);
@@ -139,7 +139,7 @@ body {
   gap: 90px;
   padding: 15px 30px;
   background: rgba(20,22,18,0.35);
-  border: 1px solid #f5ede0;
+  border: 1px solid #e9e9e9;
   border-radius: 10px;
   height: 70px;
   backdrop-filter: blur(5px);
@@ -202,17 +202,19 @@ body {
 }
 
 .page-title {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.2;
+  opacity: 30;
 }
 
 .page-subtitle {
   font-size: 14px;
-  color: var(--text-secondary);
+  color: #f0e8d8;
   margin-top: 6px;
-  font-weight: 400;
+  font-weight: 300;
+  
 }
 
 .book-btn {
@@ -224,8 +226,8 @@ body {
   border: 1px solid rgba(255,255,255,0.20);
   border-radius: 8px;
   padding: 10px 22px;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 700;
   cursor: pointer;
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
@@ -243,7 +245,7 @@ body {
    Section Title
 ========================================== */
 .section-title {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 16px;
@@ -255,7 +257,7 @@ body {
 .reservations-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 
 /* ==========================================
@@ -322,7 +324,7 @@ body {
   flex-direction: column;
   gap: 3px;
   font-size: 13px;
-  color: var(--text-secondary);
+  color: #f0e8d8;
 }
 
 .card-meta span {
@@ -342,7 +344,7 @@ body {
   align-items: center;
   gap: 8px;
   background: rgba(46,125,50,0.20);
-  color: #a5d6a7;
+  color: #7cca82;
   font-size: 13px;
   font-weight: 700;
   padding: 10px 16px;
