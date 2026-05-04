@@ -4,7 +4,7 @@
 :root {
   --accent:        #c8a96a;
   --accent-light:  #dbbf85;
-  --accent-dark:   #a8893a;
+  --accent-dark:   #a8893a8a;
   --text-primary:  #f5ede0;
   --text-muted:    rgba(245,237,224,0.6);
   --glass-bg:      rgba(40,42,38,0.22);
@@ -245,16 +245,15 @@ body {
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  
   row-gap: 10px;
-  column-gap: 12px;
+  column-gap: 10px;
   overflow-y: auto;
   padding-right: 4px;
   padding-bottom: 4px;
   align-content: start;
 }
 
-.menu-grid::-webkit-scrollbar        { width: 4px; }
+.menu-grid::-webkit-scrollbar        { width: 3px; }
 .menu-grid::-webkit-scrollbar-track  { background: transparent; }
 .menu-grid::-webkit-scrollbar-thumb  { background: var(--accent-dark); border-radius: 4px; }
 
@@ -363,20 +362,20 @@ body {
 .card-footer {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
   gap: 8px;
-  margin: 6px 10px;
+  margin-left: 6px ;
 }
 
 .add-btn {
-  width: 100%;
+  width: 45%;
   background: #c9a87e;
   color: #f5ede0;
   border: 1px solid rgba(200,169,106,0.40);
   border-radius: var(--radius-sm);
-  padding: 8px 0;
-  font-size: 11px;
-  font-weight: 700;
+  padding: 6px 0;
+  font-size: 12px;
+  font-weight: 600;
   font-family: 'poppins', sans-serif;
   cursor: pointer;
   letter-spacing: 0.5px;
@@ -398,7 +397,7 @@ body {
 ========================================== */
 .cart-panel {
   
-  background: #42463f;
+  background: var(--glass-bg);
   border: 1px solid #f5ede0;
   border-radius: 7px;
   backdrop-filter: var(--glass-blur);
