@@ -217,7 +217,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  max-width: 720px;
+  max-width: 930px;
 }
 
 /* ==========================================
@@ -232,6 +232,7 @@ body {
   -webkit-backdrop-filter: var(--glass-blur);
   box-shadow: var(--glass-shadow);
   transition: border-color 0.22s ease, box-shadow 0.22s ease;
+  
 }
 
 .order-card:hover {
