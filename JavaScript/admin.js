@@ -48,7 +48,35 @@ if (modalCancelBtn) {
   });
 }
 
-//---
+//-----
+document.querySelectorAll('.table-edit-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const editTableModal = document.getElementById('editTableModal');
+    if (editTableModal) {
+      editTableModal.classList.add('active');
+    }
+  });
+});
+
+const editTableModal = document.getElementById('editTableModal');
+if (editTableModal) {
+  const closeBtn = editTableModal.querySelector('.modal-close');
+  const cancelBtn = editTableModal.querySelector('.btn-secondary');
+  
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      editTableModal.classList.remove('active');
+    });
+  }
+  
+  if (cancelBtn) {
+    cancelBtn.addEventListener('click', () => {
+      editTableModal.classList.remove('active');
+    });
+  }
+  
+}
+//-----
 const tableModal = document.getElementById('addTableModal');
 
 const openTableModal = () => {
