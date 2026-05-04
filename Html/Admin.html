@@ -249,14 +249,14 @@
                 <span class="table-status occupied">Occupied</span>
               </div>
 
-              <div class="table-card" data-table-id="4" data-status="available">
+              <div class="table-card" data-table-id="3" data-status="available">
                 <button type="button" class="table-delete-btn" aria-label="Delete table">
                   <i class="fas fa-times"></i>
                 </button>
                 <div class="table-number">
                   <img class="table-icon" src="../Images/Table/4_people table.jpg" alt="Table" />
                 </div>
-                <h4>Table 4</h4>
+                <h4>Table 3</h4>
                 <p>Seats: <span>6</span></p>
                 <span class="table-status available">Available</span>
               </div>
@@ -576,9 +576,6 @@
     document.querySelectorAll('.modal').forEach(modal => {
       modal.addEventListener('click', e => { if (e.target === modal) closeAllModals(); });
     });
-
-    // ── Menu approve button label fix (was "Approved" — should be "Approve") ──
-    // Already fixed in HTML above
   </script>
 
   <script src="../JavaScript/admin.js"></script>
