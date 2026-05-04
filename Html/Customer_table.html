@@ -3,85 +3,104 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Table Reservations</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <title>Feliciano — Table Reservations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="stylesheet" href="../CSS/customer_table.css"/>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <nav class="nav-links">
-      <a href="#" class="nav-item">
-        <i class="fas fa-utensils"></i> Menu Items
-      </a>
-      <a href="#" class="nav-item active">
-        <i class="far fa-calendar-alt"></i> Booking
-      </a>
-      <a href="#" class="nav-item">
-        <i class="fas fa-shopping-cart"></i> Order List
-      </a>
-      <a href="#" class="nav-item">
-        <i class="far fa-user-circle"></i> Profile
-      </a>
-    </nav>
-  </header>
+  <div class="dashboard">
 
-  <!-- MAIN CONTENT -->
-  <main class="main-content">
-
-    <!-- Page Header Row -->
-    <div class="page-header">
-      <div class="page-header-left">
-        <h1 class="page-title">Table Reservations</h1>
-        <p class="page-subtitle">Book a table for your next visit</p>
+    <!-- Topbar -->
+    <header class="topbar">
+      <div class="brand">Feliciano</div>
+      <div class="top-right">
+        <div class="dashboard-label">Customer<br>Dashboard</div>
+        <button class="logout-btn" aria-label="Logout">
+          <i class="fas fa-right-from-bracket" style="font-size: 30px;"></i>
+        </button>
       </div>
-      <button class="book-btn">
-        <i class="fas fa-plus"></i> Book a Table
-      </button>
+    </header>
+
+    <!-- Outer glass wrapper -->
+    <div class="outer-wrapper">
+
+      <!-- Navbar -->
+      <nav class="navbar">
+        <a href="#" class="nav-item">
+          <i class="fas fa-utensils"></i> Menu Items
+        </a>
+        <a href="#" class="nav-item active">
+          <i class="far fa-calendar-alt"></i> Booking
+        </a>
+        <a href="#" class="nav-item">
+          <i class="fas fa-shopping-cart"></i> Order List
+        </a>
+        <a href="#" class="nav-item">
+          <i class="far fa-user-circle"></i> Profile
+        </a>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="main-content">
+
+        <!-- Page Header Row -->
+        <div class="page-header">
+          <div class="page-header-left">
+            <h1 class="page-title">Table Reservations</h1>
+            <p class="page-subtitle">Book a table for your next visit</p>
+          </div>
+          <button class="book-btn">
+            <i class="fas fa-plus"></i> Book a Table
+          </button>
+        </div>
+
+        <!-- Upcoming Reservations -->
+        <h2 class="section-title">Upcoming Reservations</h2>
+
+        <div class="reservations-list">
+
+          <!-- Reservation Card 1 — Confirmed -->
+          <div class="reservation-card">
+            <div class="card-top-row">
+              <span class="table-name">Table 5</span>
+              <span class="status-badge confirmed">
+                <i class="fas fa-check-circle"></i> Confirmed
+              </span>
+            </div>
+            <div class="card-meta">
+              <span><i class="far fa-calendar"></i> 12/03/2026 at 19:00</span>
+              <br>
+              <span><i class="fas fa-users"></i> 4 guests</span>
+            </div>
+            <div class="confirmation-msg">
+              <i class="fas fa-check-circle"></i>
+              Your reservation is confirmed! See you soon.
+            </div>
+          </div>
+
+          <!-- Reservation Card 2 — Pending -->
+          <div class="reservation-card">
+            <div class="card-top-row">
+              <span class="table-name">Table 7</span>
+              <span class="status-badge pending">
+                <i class="fas fa-clock"></i> Pending
+              </span>
+            </div>
+            <div class="card-meta">
+              <span style="display: block; margin-bottom: 16px;"><i class="far fa-calendar"></i> 12/03/2026 at 19:00</span>
+              <span><i class="fas fa-users"></i> 4 guests</span>
+            </div>
+          </div>
+
+        </div>
+      </main>
+
     </div>
+    <!-- /outer-wrapper -->
 
-    <!-- Upcoming Reservations -->
-    <h2 class="section-title">Upcoming Reservations</h2>
-
-    <div class="reservations-list">
-
-      <!-- Reservation Card 1 — Confirmed -->
-      <div class="reservation-card">
-        <div class="card-top-row">
-          <span class="table-name">Table 5</span>
-          <span class="status-badge confirmed">
-            <i class="fas fa-check-circle"></i> Confirmed
-          </span>
-        </div>
-        <div class="card-meta">
-          <span><i class="far fa-calendar"></i> 12/03/2026 at 19:00</span> 
-          <br>
-          <span><i class="fas fa-users"></i> 4 guests</span>
-        </div>
-        <div class="confirmation-msg">
-          <i class="fas fa-check-circle"></i>
-          Your reservation is confirmed! See you soon.
-        </div>
-      </div>
-
-      <!-- Reservation Card 2 — Pending -->
-      <div class="reservation-card">
-        <div class="card-top-row">
-          <span class="table-name">Table 7</span>
-          <span class="status-badge pending">
-            <i class="fas fa-clock"></i> Pending
-          </span>
-        </div>
-        <div class="card-meta">
-          <span style="display: block; margin-bottom: 16px;"><i class="far fa-calendar"></i> 12/03/2026 at 19:00</span>
-          <span><i class="fas fa-users"></i> 4 guests</span>
-        </div>
-      </div>
-
-    </div>
-  </main>
+  </div>
 
 </body>
 </html>
