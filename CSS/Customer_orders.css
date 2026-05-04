@@ -10,7 +10,7 @@
   --text-muted:     rgba(254,254,255,0.45);
   --glass-bg:       rgba(40,42,38,0.22);
   --glass-border:   rgba(255,255,255,0.10);
-  --glass-blur:     blur(10px);
+  --glass-blur:     blur(5px);
   --glass-shadow:   0 12px 40px rgba(0,0,0,0.35);
   --card-bg:        rgba(40,42,38,0.52);
   --radius-card:    10px;
