@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Feliciano — Customer Dashboard</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="../CSS/customer.css" />
 </head>
@@ -12,21 +12,21 @@
 <body>
   <div class="dashboard">
 
-    <!-- ── Topbar ───────────────────────────────── -->
+    <!-- Topbar -->
     <header class="topbar">
       <div class="brand">Feliciano</div>
       <div class="top-right">
         <div class="dashboard-label">Customer<br>Dashboard</div>
         <button class="logout-btn" aria-label="Logout">
-          <i class="fas fa-right-from-bracket"></i>
+          <i class="fas fa-right-from-bracket" style="font-size: 30px;"></i>
         </button>
       </div>
     </header>
 
-    <!-- ── Outer glass wrapper ───────────────────── -->
+    <!-- Outer glass wrapper -->
     <div class="outer-wrapper">
 
-      <!-- ── Navbar ─────────────────────────────── -->
+      <!-- Navbar -->
       <nav class="navbar">
         <a href="#" class="nav-item active">
           <i class="fas fa-utensils"></i> Menu Items
@@ -42,7 +42,7 @@
         </a>
       </nav>
 
-      <!-- ── Main Layout ──────────────────────────── -->
+      <!-- Main Layout -->
       <main class="main-layout">
 
         <!-- Left: Menu Section -->
@@ -64,7 +64,9 @@
           <div class="menu-grid">
 
             <div class="menu-card">
-              <div class="card-img" style="background-image:url('../Images/food/1.png')"></div>
+              <div class="card-img" style="background-image:url('../Images/food/1.png')">
+                <span class="card-tag">Pizza</span>
+              </div>
               <div class="card-body">
                 <div class="card-title-row">
                   <span class="card-name">Margherita Pizza</span>
@@ -72,14 +74,15 @@
                 </div>
                 <p class="card-desc">Classic tomato sauce, mozzarella, and fresh basil</p>
                 <div class="card-footer">
-                  <span class="card-tag">Pizza</span>
                   <button class="add-btn">Add To Cart</button>
                 </div>
               </div>
             </div>
 
             <div class="menu-card">
-              <div class="card-img" style="background-image:url('../Images/food/2.png')"></div>
+              <div class="card-img" style="background-image:url('../Images/food/2.png')">
+                <span class="card-tag">Burgers</span>
+              </div>
               <div class="card-body">
                 <div class="card-title-row">
                   <span class="card-name">Classic Burger</span>
@@ -87,14 +90,15 @@
                 </div>
                 <p class="card-desc">Juicy beef patty with lettuce, tomato and house sauce</p>
                 <div class="card-footer">
-                  <span class="card-tag">Burgers</span>
                   <button class="add-btn">Add To Cart</button>
                 </div>
               </div>
             </div>
 
             <div class="menu-card">
-              <div class="card-img" style="background-image:url('../Images/food/3.png')"></div>
+              <div class="card-img" style="background-image:url('../Images/food/3.png')">
+                <span class="card-tag">Salads</span>
+              </div>
               <div class="card-body">
                 <div class="card-title-row">
                   <span class="card-name">Garden Salad</span>
@@ -102,14 +106,15 @@
                 </div>
                 <p class="card-desc">Fresh greens, cherry tomatoes, cucumber, lemon dressing</p>
                 <div class="card-footer">
-                  <span class="card-tag">Salads</span>
                   <button class="add-btn">Add To Cart</button>
                 </div>
               </div>
             </div>
 
             <div class="menu-card">
-              <div class="card-img" style="background-image:url('../Images/food/4.png')"></div>
+              <div class="card-img" style="background-image:url('../Images/food/4.png')">
+                <span class="card-tag">Main Course</span>
+              </div>
               <div class="card-body">
                 <div class="card-title-row">
                   <span class="card-name">Grilled Salmon</span>
@@ -117,14 +122,15 @@
                 </div>
                 <p class="card-desc">Atlantic salmon, herb butter, seasonal vegetables</p>
                 <div class="card-footer">
-                  <span class="card-tag">Main Course</span>
                   <button class="add-btn">Add To Cart</button>
                 </div>
               </div>
             </div>
 
             <div class="menu-card">
-              <div class="card-img" style="background-image:url('../Images/food/5.png')"></div>
+              <div class="card-img" style="background-image:url('../Images/food/5.png')">
+                <span class="card-tag">Pasta</span>
+              </div>
               <div class="card-body">
                 <div class="card-title-row">
                   <span class="card-name">Penne Arrabbiata</span>
@@ -132,14 +138,15 @@
                 </div>
                 <p class="card-desc">Spicy tomato sauce with garlic and fresh parsley</p>
                 <div class="card-footer">
-                  <span class="card-tag">Pasta</span>
                   <button class="add-btn">Add To Cart</button>
                 </div>
               </div>
             </div>
 
             <div class="menu-card">
-              <div class="card-img" style="background-image:url('../Images/food/6.png')"></div>
+              <div class="card-img" style="background-image:url('../Images/food/6.png')">
+                <span class="card-tag">Desserts</span>
+              </div>
               <div class="card-body">
                 <div class="card-title-row">
                   <span class="card-name">Tiramisu</span>
@@ -147,14 +154,15 @@
                 </div>
                 <p class="card-desc">Classic Italian espresso dessert with mascarpone</p>
                 <div class="card-footer">
-                  <span class="card-tag">Desserts</span>
                   <button class="add-btn">Add To Cart</button>
                 </div>
               </div>
             </div>
 
             <div class="menu-card">
-              <div class="card-img" style="background-image:url('../Images/food/7.png')"></div>
+              <div class="card-img" style="background-image:url('../Images/food/7.png')">
+                <span class="card-tag">Appetizers</span>
+              </div>
               <div class="card-body">
                 <div class="card-title-row">
                   <span class="card-name">Bruschetta</span>
@@ -162,14 +170,15 @@
                 </div>
                 <p class="card-desc">Toasted bread, fresh tomatoes, garlic, extra virgin olive oil</p>
                 <div class="card-footer">
-                  <span class="card-tag">Appetizers</span>
                   <button class="add-btn">Add To Cart</button>
                 </div>
               </div>
             </div>
 
             <div class="menu-card">
-              <div class="card-img" style="background-image:url('../Images/food/8.png')"></div>
+              <div class="card-img" style="background-image:url('../Images/food/8.png')">
+                <span class="card-tag">Pizza</span>
+              </div>
               <div class="card-body">
                 <div class="card-title-row">
                   <span class="card-name">Pepperoni Pizza</span>
@@ -177,14 +186,15 @@
                 </div>
                 <p class="card-desc">Rich tomato base, pepperoni, mozzarella and oregano</p>
                 <div class="card-footer">
-                  <span class="card-tag">Pizza</span>
                   <button class="add-btn">Add To Cart</button>
                 </div>
               </div>
             </div>
 
             <div class="menu-card">
-              <div class="card-img" style="background-image:url('../Images/food/9.png')"></div>
+              <div class="card-img" style="background-image:url('../Images/food/9.png')">
+                <span class="card-tag">Salads</span>
+              </div>
               <div class="card-body">
                 <div class="card-title-row">
                   <span class="card-name">Caesar Salad</span>
@@ -192,14 +202,15 @@
                 </div>
                 <p class="card-desc">Romaine, parmesan, croutons and anchovy caesar dressing</p>
                 <div class="card-footer">
-                  <span class="card-tag">Salads</span>
                   <button class="add-btn">Add To Cart</button>
                 </div>
               </div>
             </div>
 
             <div class="menu-card">
-              <div class="card-img" style="background-image:url('../Images/food/10.png')"></div>
+              <div class="card-img" style="background-image:url('../Images/food/10.png')">
+                <span class="card-tag">Desserts</span>
+              </div>
               <div class="card-body">
                 <div class="card-title-row">
                   <span class="card-name">Chocolate Fondant</span>
@@ -207,7 +218,6 @@
                 </div>
                 <p class="card-desc">Warm molten chocolate cake served with vanilla ice cream</p>
                 <div class="card-footer">
-                  <span class="card-tag">Desserts</span>
                   <button class="add-btn">Add To Cart</button>
                 </div>
               </div>
@@ -221,7 +231,7 @@
         <aside class="cart-panel">
           <div class="cart-header">
             <i class="fas fa-shopping-cart cart-icon"></i>
-            <h2 class="cart-title">Your Cart<span>(0)</span></h2>
+            <h2 class="cart-title">Your Cart <span style="color:beige;">(0)</span></h2>
           </div>
           <div class="cart-empty">
             <p>Cart is empty</p>
@@ -233,5 +243,6 @@
     <!-- /outer-wrapper -->
 
   </div>
+  <script src="../JavaScript/customer.js"></script>
 </body>
 </html>
