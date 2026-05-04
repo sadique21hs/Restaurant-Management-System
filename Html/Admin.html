@@ -3,532 +3,583 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Feliciano Admin Dashboard</title>
-<link rel="stylesheet" href="../CSS/admin.css" />
+  <title>Feliciano — Admin Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../CSS/admin.css" />
 </head>
 <body>
   <div class="dashboard">
+
+    <!-- Topbar -->
     <header class="topbar">
       <div class="brand">Feliciano</div>
       <div class="top-right">
         <div class="admin-title">Admin<br>Dashboard</div>
-        <div class="logout" onclick="window.location.href='login.html'">
-          <img src="../Images/logout.png" alt="Logout" class="logout-icon">
-         </div>
+        <button class="logout-btn" aria-label="Logout" onclick="window.location.href='login.html'">
+          <i class="fas fa-right-from-bracket" style="font-size: 18px;"></i>
+        </button>
       </div>
     </header>
 
-    <main class="container">
-      <section class="tabs">
-        <div class="tab active" data-section="overview" style="display: flex; align-items: center; gap: 8px;">
-          <img src="../Images/search-file.png" alt="overview-icon" style="width: 20px; height: 20px; vertical-align: middle;"> 
+    <!-- Outer glass wrapper -->
+    <div class="outer-wrapper">
+
+      <!-- Navbar / Tabs -->
+      <nav class="navbar">
+        <div class="tab active" data-section="overview">
+          <i class="fas fa-chart-pie"></i>
           <span>Overview</span>
         </div>
-        <div class="tab" data-section="employees" style="display: flex; align-items: center; gap: 8px;">
-          <img src="../Images/employees.png" alt="employees-icon" style="width: 20px; height: 20px; vertical-align: middle;">
+        <div class="tab" data-section="employees">
+          <i class="fas fa-users"></i>
           <span>Employees</span>
         </div>
-        <div class="tab" data-section="customer" style="display: flex; align-items: center; gap: 8px;">
-          <img src="../Images/customer.png" alt="customer-icon" style="width: 20px; height: 20px; vertical-align: middle;">
+        <div class="tab" data-section="customer">
+          <i class="fas fa-user-check"></i>
           <span>Customer</span>
         </div>
-        <div class="tab" data-section="tables" style="display: flex; align-items: center; gap: 8px;">
-          <img src="../Images/tables.png" alt="tables-icon" style="width: 20px; height: 20px; vertical-align: middle;">
+        <div class="tab" data-section="tables">
+          <i class="fas fa-chair"></i>
           <span>Tables</span>
         </div>
-        <div class="tab" data-section="menu" style="display: flex; align-items: center; gap: 8px;">
-          <img src="../Images/menu.png" alt="menu-icon" style="width: 20px; height: 20px; vertical-align: middle;">
+        <div class="tab" data-section="menu">
+          <i class="fas fa-utensils"></i>
           <span>Menu Items</span>
         </div>
-        <div class="tab" data-section="reports" style="display: flex; align-items: center; gap: 8px;">
-          <img src="../Images/reports.png" alt="reports-icon" style="width: 20px; height: 20px; vertical-align: middle;">
+        <div class="tab" data-section="reports">
+          <i class="fas fa-file-chart-column"></i>
           <span>Reports</span>
         </div>
-      </section>
+      </nav>
 
-      <div class="section-content active" id="overview">
-        <section class="stats">
-          <div class="card">
-            <div class="icon-box blue">
-              <img src="../Images/icon/employee.png" alt="Employees" />
-            </div>
-            <h3>122</h3>
-            <p>Total Employees</p>
-          </div>
-          <div class="card">
-            <div class="icon-box green">
-              <img src="../Images/icon/tables.png" alt="Tables" />
-            </div>
-            <h3>8</h3>
-            <p>Available Tables</p>
-          </div>
-          <div class="card">
-            <div class="icon-box orange">
-              <img src="../Images/icon/scissors.png" alt="Menu Items" />
-            </div>
-            <h3>45</h3>
-            <p>Menu Items</p>
-          </div>
-          <div class="card">
-            <div class="icon-box green">
-              <img src="../Images/icon/dollar-symbol.png" alt="Revenue" />
-            </div>
-            <h3>$12.5K</h3>
-            <p>Monthly Revenue</p>
-          </div>
-        </section>
+      <!-- Main Scrollable Content -->
+      <main class="main-content">
 
-        <section class="quick-actions">
-          <h2>Quick Actions</h2>
-          <div class="sub">Use the tabs above to manage different aspects of the restaurant</div>
-          <div class="actions-grid">
-            <div class="action-btn">
-              <img src="../Images/employees.png" alt="Add Employee" />
-              <span>Add Employee</span>
-            </div>
-            <div class="action-btn">
-              <img src="../Images/customer.png" alt="Approve Customer" />
-              <span>Approve Customer</span>
-            </div>
-            <div class="action-btn">
-              <img src="../Images/reports.png" alt="View Reports" />
-              <span>View Reports</span>
-            </div>
-            <div class="action-btn">
-              <img src="../Images/tables.png" alt="Manage Tables" />
-              <span>Manage Tables</span>
-            </div>
-            <div class="action-btn">
-              <img src="../Images/menu.png" alt="Approve Menu Items" />
-              <span>Approve Menu Items</span>
-            </div>
-          </div>
-        </section>
-      </div>
+        <!-- ===================== OVERVIEW ===================== -->
+        <div class="section-content active" id="overview">
 
-      <div class="section-content" id="employees">
-        <div class="employees-header">
-          <div>
-            <h2>Employee Management</h2>
-            <p class="sub">Add and manage chefs and waiters</p>
+          <h1 class="page-title">Overview</h1>
+          <p class="page-subtitle">Restaurant performance at a glance</p>
+
+          <div class="stats">
+            <div class="card">
+              <div class="icon-box blue">
+                <i class="fas fa-users"></i>
+              </div>
+              <h3 class="blue">122</h3>
+              <p>Total Employees</p>
+            </div>
+            <div class="card">
+              <div class="icon-box green">
+                <i class="fas fa-chair"></i>
+              </div>
+              <h3 class="green">8</h3>
+              <p>Available Tables</p>
+            </div>
+            <div class="card">
+              <div class="icon-box orange">
+                <i class="fas fa-utensils"></i>
+              </div>
+              <h3 class="orange">45</h3>
+              <p>Menu Items</p>
+            </div>
+            <div class="card">
+              <div class="icon-box gold">
+                <i class="fas fa-dollar-sign"></i>
+              </div>
+              <h3 class="gold">$12.5K</h3>
+              <p>Monthly Revenue</p>
+            </div>
           </div>
-          <button class="add-employee-btn" type="button">+ Add Employee</button>
+
+          <section class="quick-actions">
+            <h2>Quick Actions</h2>
+            <div class="sub">Use the tabs above to manage different aspects of the restaurant</div>
+            <div class="actions-grid">
+              <div class="action-btn" onclick="switchTab('employees'); openModal('addEmployeeModal');">
+                <i class="fas fa-user-plus"></i>
+                <span>Add Employee</span>
+              </div>
+              <div class="action-btn" onclick="switchTab('customer')">
+                <i class="fas fa-user-check"></i>
+                <span>Approve Customer</span>
+              </div>
+              <div class="action-btn" onclick="switchTab('reports')">
+                <i class="fas fa-file-chart-column"></i>
+                <span>View Reports</span>
+              </div>
+              <div class="action-btn" onclick="switchTab('tables'); openModal('addTableModal');">
+                <i class="fas fa-chair"></i>
+                <span>Manage Tables</span>
+              </div>
+              <div class="action-btn" onclick="switchTab('menu')">
+                <i class="fas fa-utensils"></i>
+                <span>Approve Menu Items</span>
+              </div>
+            </div>
+          </section>
         </div>
 
-        <div class="employees-grid">
-          <div class="employee-card">
-            <div class="employee-info">
-              <h4>Marco Rossi</h4>
-              <p>marco.rossi@feliciano.com</p>
-              <div class="status-badges">
-                <span class="badge clocked-out">Clocked Out</span>
-                <span class="badge approved"> Approved</span>
-              </div>
-            </div>
-            <span class="role-badge waiter">Waiter</span>
-          </div>
+        <!-- ===================== EMPLOYEES ===================== -->
+        <div class="section-content" id="employees">
 
-          <div class="employee-card">
-            <div class="employee-info">
-              <h4>Antonio Guido</h4>
-              <p>antonio.guido@feliciano.com</p>
-              <div class="status-badges">
-                <span class="badge clocked-out">Clocked Out</span>
-                <span class="badge approved">Approved</span>
-              </div>
-            </div>
-            <span class="role-badge chef">Chef</span>
-          </div>
-
-          <div class="employee-card">
-            <div class="employee-info">
-              <h4>Isabella Romano</h4>
-              <p>isabella.romano@feliciano.com</p>
-              <div class="status-badges">
-                <span class="badge clocked-out">Clocked Out</span>
-                <span class="badge approved">Approved</span>
-              </div>
-            </div>
-            <span class="role-badge waiter">Waiter</span>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="section-content" id="customer">
-        <div class="customer-approval">
-          <div class="customer-approval-header">
-            <h2>Customer Approval</h2>
-            <p class="sub">Approve or reject customer account requests</p>
-          </div>
-
-          <div class="customer-block">
-            <h3>Pending Approvals (<span id="pendingCount">1</span>)</h3>
-            <div class="customer-requests" id="pendingCustomers">
-              <div class="customer-request" data-customer-id="pending-1">
-                <div class="customer-request-info">
-                  <h4>Bob Brown</h4>
-                  <p>bob@email.com</p>
-                  <small>Member since 3/10/2026</small>
-                </div>
-                <div class="customer-request-actions">
-                  <button type="button" class="customer-action-btn approve" data-action="approve">✓ Approve</button>
-                  <button type="button" class="customer-action-btn reject" data-action="reject">✕ Reject</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="customer-block">
-            <h3>Approved Customers (<span id="approvedCount">1</span>)</h3>
-            <div class="approved-customers" id="approvedCustomers">
-              <div class="approved-customer" data-customer-id="approved-1">
-                <div class="approved-check">✓</div>
-                <div class="approved-info">
-                  <h4>Bob Brown</h4>
-                  <p>bob@email.com</p>
-                  <small>Member since 3/10/2026</small>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="section-content" id="tables">
-        <div class="tables-panel">
-          <div class="tables-header">
+          <div class="employees-header">
             <div>
-              <h2>Table Management</h2>
-              <p class="sub">Add and manage restaurant tables</p>
+              <h2>Employee Management</h2>
+              <p class="sub">Add and manage chefs and waiters</p>
             </div>
-            <button type="button" class="add-table-btn">+ Add Table</button>
+            <button class="add-employee-btn" type="button" id="openAddEmployee">
+              <i class="fas fa-plus"></i> Add Employee
+            </button>
           </div>
 
-          <div class="tables-grid" id="tablesGrid">
-            <div class="table-card" data-table-id="1" data-status="reserved">
-              <button type="button" class="table-delete-btn" aria-label="Delete table">✕</button>
-              <div class="table-number"><img class="table-icon" src="../Images/Table/4_people table.jpg" alt="Table" /></div>
-              <h4>Table 1</h4>
-              <p>Seat: <span>6</span></p>
-              <span class="table-status reserved">Reserved</span>
+          <div class="employees-grid">
+            <div class="employee-card">
+              <div class="employee-info">
+                <h4>Marco Rossi</h4>
+                <p>marco.rossi@feliciano.com</p>
+                <div class="status-badges">
+                  <span class="badge clocked-out"><i class="fas fa-clock"></i> Clocked Out</span>
+                  <span class="badge approved"><i class="fas fa-check"></i> Approved</span>
+                </div>
+              </div>
+              <span class="role-badge waiter">Waiter</span>
             </div>
 
-            <div class="table-card" data-table-id="2" data-status="occupied">
-              <button type="button" class="table-delete-btn" aria-label="Delete table">✕</button>
-              <div class="table-number"><img class="table-icon" src="../Images/Table/4_people table.jpg" alt="Table" /></div>
-              <h4>Table 2</h4>
-              <p>Seat: <span>6</span></p>
-              <span class="table-status occupied">occupied</span>
+            <div class="employee-card">
+              <div class="employee-info">
+                <h4>Antonio Guido</h4>
+                <p>antonio.guido@feliciano.com</p>
+                <div class="status-badges">
+                  <span class="badge clocked-out"><i class="fas fa-clock"></i> Clocked Out</span>
+                  <span class="badge approved"><i class="fas fa-check"></i> Approved</span>
+                </div>
+              </div>
+              <span class="role-badge chef">Chef</span>
             </div>
 
-            <div class="table-card" data-table-id="4" data-status="available">
-              <button type="button" class="table-delete-btn" aria-label="Delete table">✕</button>
-              <div class="table-number"><img class="table-icon" src="../Images/Table/4_people table.jpg" alt="Table" /></div>
-              <h4>Table 4</h4>
-              <p>Seat: <span>6</span></p>
-              <span class="table-status available">Available</span>
+            <div class="employee-card">
+              <div class="employee-info">
+                <h4>Isabella Romano</h4>
+                <p>isabella.romano@feliciano.com</p>
+                <div class="status-badges">
+                  <span class="badge clocked-out"><i class="fas fa-clock"></i> Clocked Out</span>
+                  <span class="badge approved"><i class="fas fa-check"></i> Approved</span>
+                </div>
+              </div>
+              <span class="role-badge waiter">Waiter</span>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="section-content" id="menu">
-        <div class="menu-approval">
-          <div class="menu-approval-header">
-            <h2>Menu Item Approval</h2>
-            <p class="sub">Approve new menu items from chefs</p>
-          </div>
+        <!-- ===================== CUSTOMER ===================== -->
+        <div class="section-content" id="customer">
+          <div class="customer-approval">
+            <div class="customer-approval-header">
+              <h2>Customer Approval</h2>
+              <p class="sub">Approve or reject customer account requests</p>
+            </div>
 
-          <div class="menu-block">
-            <h3>
-              <span class="menu-dot" aria-hidden="true"></span>
-              <span class="menu-heading-text">Pending Approval (<span id="pendingMenuCount">1</span>)</span>
-            </h3>
-            <div class="menu-grid" id="pendingMenuItems">
-              <div class="menu-card pending" data-menu-id="pending-1">
-                <div class="menu-thumb">
-                  <img src="../Images/food/main%20cross/pexels-campbell-downie-3549547-5317239.jpg" alt="Margherita Pizza" />
-                </div>
-                <div class="menu-card-body">
-                  <div class="menu-title-row">
-                    <div class="menu-name">Margherita Pizza</div>
-                    <div class="menu-price">$12.99</div>
+            <div class="customer-block">
+              <h3>Pending Approvals (<span id="pendingCount">1</span>)</h3>
+              <div class="customer-requests" id="pendingCustomers">
+                <div class="customer-request" data-customer-id="pending-1">
+                  <div class="customer-request-info">
+                    <h4>Bob Brown</h4>
+                    <p>bob@email.com</p>
+                    <small>Member since 3/10/2026</small>
                   </div>
-                  <div class="menu-desc">Classic tomato sauce, mozzarella, and fresh basil</div>
-                  <div class="menu-bottom-row">
-                    <span class="menu-tag">Pizza</span>
-                    <div class="menu-action-row">
-                      <button type="button" class="menu-edit-btn" data-action="edit-menu">Edit</button>
-                      <button type="button" class="menu-approve-btn" data-action="approve-menu">Approved</button>
-                      <button type="button" class="menu-reject-btn" data-action="reject-menu">Reject</button>
+                  <div class="customer-request-actions">
+                    <button type="button" class="customer-action-btn approve" data-action="approve">
+                      <i class="fas fa-check"></i> Approve
+                    </button>
+                    <button type="button" class="customer-action-btn reject" data-action="reject">
+                      <i class="fas fa-times"></i> Reject
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="customer-block">
+              <h3>Approved Customers (<span id="approvedCount">0</span>)</h3>
+              <div class="approved-customers" id="approvedCustomers">
+                <p class="empty-state">No approved customers yet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================== TABLES ===================== -->
+        <div class="section-content" id="tables">
+          <div class="tables-panel">
+            <div class="tables-header">
+              <div>
+                <h2>Table Management</h2>
+                <p class="sub">Add and manage restaurant tables</p>
+              </div>
+              <button type="button" class="add-table-btn" id="openAddTable">
+                <i class="fas fa-plus"></i> Add Table
+              </button>
+            </div>
+
+            <div class="tables-grid" id="tablesGrid">
+              <div class="table-card" data-table-id="1" data-status="reserved">
+                <button type="button" class="table-delete-btn" aria-label="Delete table">
+                  <i class="fas fa-times"></i>
+                </button>
+                <div class="table-number">
+                  <img class="table-icon" src="../Images/Table/4_people table.jpg" alt="Table" />
+                </div>
+                <h4>Table 1</h4>
+                <p>Seats: <span>6</span></p>
+                <span class="table-status reserved">Reserved</span>
+              </div>
+
+              <div class="table-card" data-table-id="2" data-status="occupied">
+                <button type="button" class="table-delete-btn" aria-label="Delete table">
+                  <i class="fas fa-times"></i>
+                </button>
+                <div class="table-number">
+                  <img class="table-icon" src="../Images/Table/4_people table.jpg" alt="Table" />
+                </div>
+                <h4>Table 2</h4>
+                <p>Seats: <span>6</span></p>
+                <span class="table-status occupied">Occupied</span>
+              </div>
+
+              <div class="table-card" data-table-id="4" data-status="available">
+                <button type="button" class="table-delete-btn" aria-label="Delete table">
+                  <i class="fas fa-times"></i>
+                </button>
+                <div class="table-number">
+                  <img class="table-icon" src="../Images/Table/4_people table.jpg" alt="Table" />
+                </div>
+                <h4>Table 4</h4>
+                <p>Seats: <span>6</span></p>
+                <span class="table-status available">Available</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================== MENU ===================== -->
+        <div class="section-content" id="menu">
+          <div class="menu-approval">
+            <div class="menu-approval-header">
+              <h2>Menu Item Approval</h2>
+              <p class="sub">Approve new menu items from chefs</p>
+            </div>
+
+            <div class="menu-block">
+              <h3>
+                <span class="menu-dot" aria-hidden="true"></span>
+                <span class="menu-heading-text">Pending Approval (<span id="pendingMenuCount">1</span>)</span>
+              </h3>
+              <div class="menu-grid" id="pendingMenuItems">
+                <div class="menu-card pending" data-menu-id="pending-1">
+                  <div class="menu-thumb">
+                    <img src="../Images/food/main%20cross/pexels-campbell-downie-3549547-5317239.jpg" alt="Margherita Pizza" />
+                  </div>
+                  <div class="menu-card-body">
+                    <div class="menu-title-row">
+                      <div class="menu-name">Margherita Pizza</div>
+                      <div class="menu-price">$12.99</div>
+                    </div>
+                    <div class="menu-desc">Classic tomato sauce, mozzarella, and fresh basil</div>
+                    <div class="menu-bottom-row">
+                      <span class="menu-tag">Pizza</span>
+                      <div class="menu-action-row">
+                        <button type="button" class="menu-edit-btn" data-action="edit-menu">Edit</button>
+                        <button type="button" class="menu-approve-btn" data-action="approve-menu">Approve</button>
+                        <button type="button" class="menu-reject-btn" data-action="reject-menu">Reject</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-block">
+              <h3>
+                <span class="menu-check-icon" aria-hidden="true"><i class="fas fa-check"></i></span>
+                <span class="menu-heading-text">Approved Menu Items (<span id="approvedMenuCount">3</span>)</span>
+              </h3>
+              <div class="menu-grid approved" id="approvedMenuItems">
+                <div class="menu-card approved" data-menu-id="approved-1">
+                  <div class="menu-thumb">
+                    <img src="../Images/food/main%20cross/pexels-ionela-mat-268382825-19671341.jpg" alt="Margherita Pizza" />
+                  </div>
+                  <div class="menu-check" aria-hidden="true"><i class="fas fa-check"></i></div>
+                  <div class="menu-card-body">
+                    <div class="menu-title-row">
+                      <div class="menu-name">Margherita Pizza</div>
+                      <div class="menu-price">$12.99</div>
+                    </div>
+                    <div class="menu-desc">Classic tomato sauce, mozzarella, and fresh basil</div>
+                    <div class="menu-bottom-row">
+                      <span class="menu-tag">Pizza</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-card approved" data-menu-id="approved-2">
+                  <div class="menu-thumb">
+                    <img src="../Images/food/main%20cross/pexels-julia-chalova-10303257.jpg" alt="Pasta" />
+                  </div>
+                  <div class="menu-check" aria-hidden="true"><i class="fas fa-check"></i></div>
+                  <div class="menu-card-body">
+                    <div class="menu-title-row">
+                      <div class="menu-name">Pasta Carbonara</div>
+                      <div class="menu-price">$14.99</div>
+                    </div>
+                    <div class="menu-desc">Creamy egg sauce, pancetta, and parmesan</div>
+                    <div class="menu-bottom-row">
+                      <span class="menu-tag">Pasta</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-card approved" data-menu-id="approved-3">
+                  <div class="menu-thumb">
+                    <img src="../Images/food/main%20cross/pexels-lucas-porras-1937324539-35723478.jpg" alt="Bruschetta" />
+                  </div>
+                  <div class="menu-check" aria-hidden="true"><i class="fas fa-check"></i></div>
+                  <div class="menu-card-body">
+                    <div class="menu-title-row">
+                      <div class="menu-name">Bruschetta</div>
+                      <div class="menu-price">$12.99</div>
+                    </div>
+                    <div class="menu-desc">Toasted bread with fresh tomatoes and basil</div>
+                    <div class="menu-bottom-row">
+                      <span class="menu-tag">Starter</span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="menu-block">
-            <h3>
-              <span class="menu-check-icon" aria-hidden="true">✓</span>
-              <span class="menu-heading-text">Approved Menu Items (<span id="approvedMenuCount">3</span>)</span>
-            </h3>
-            <div class="menu-grid approved" id="approvedMenuItems">
-              <div class="menu-card approved" data-menu-id="approved-1">
-                <div class="menu-thumb">
-                  <img src="../Images/food/main%20cross/pexels-ionela-mat-268382825-19671341.jpg" alt="Margherita Pizza" />
-                </div>
-                <div class="menu-check" aria-hidden="true">✓</div>
-                <div class="menu-card-body">
-                  <div class="menu-title-row">
-                    <div class="menu-name">Margherita Pizza</div>
-                    <div class="menu-price">$12.99</div>
-                  </div>
-                  <div class="menu-desc">Classic tomato sauce, mozzarella, and fresh basil</div>
-                  <div class="menu-bottom-row">
-                    <span class="menu-tag">Pizza</span>
-                  </div>
+        <!-- ===================== REPORTS ===================== -->
+        <div class="section-content" id="reports">
+          <div class="reports-panel">
+            <div class="reports-header">
+              <div>
+                <h2>Financial Reports</h2>
+                <p class="sub">View Revenue And Sales Analytics</p>
+              </div>
+              <button type="button" class="download-report-btn">
+                <i class="fas fa-download"></i> Download Report
+              </button>
+            </div>
+
+            <div class="reports-filter">
+              <div class="date-field">
+                <label for="reportStart">Start Date</label>
+                <input type="date" id="reportStart" name="reportStart" value="2026-02-04">
+              </div>
+              <div class="date-field">
+                <label for="reportEnd">End Date</label>
+                <input type="date" id="reportEnd" name="reportEnd" value="2026-02-04">
+              </div>
+            </div>
+
+            <div class="reports-cards">
+              <div class="report-card">
+                <div class="report-icon green"><i class="fas fa-dollar-sign"></i></div>
+                <div>
+                  <p>Total Revenue</p>
+                  <h3>$122</h3>
                 </div>
               </div>
-
-              <div class="menu-card approved" data-menu-id="approved-2">
-                <div class="menu-thumb">
-                  <img src="../Images/food/main%20cross/pexels-julia-chalova-10303257.jpg" alt="Margherita Pizza" />
-                </div>
-                <div class="menu-check" aria-hidden="true">✓</div>
-                <div class="menu-card-body">
-                  <div class="menu-title-row">
-                    <div class="menu-name">Margherita Pizza</div>
-                    <div class="menu-price">$12.99</div>
-                  </div>
-                  <div class="menu-desc">Classic tomato sauce, mozzarella, and fresh basil</div>
-                  <div class="menu-bottom-row">
-                    <span class="menu-tag">Pizza</span>
-                  </div>
+              <div class="report-card">
+                <div class="report-icon blue"><i class="fas fa-receipt"></i></div>
+                <div>
+                  <p>Total Orders</p>
+                  <h3>0</h3>
                 </div>
               </div>
-
-              <div class="menu-card approved" data-menu-id="approved-3">
-                <div class="menu-thumb">
-                  <img src="../Images/food/main%20cross/pexels-lucas-porras-1937324539-35723478.jpg" alt="Margherita Pizza" />
-                </div>
-                <div class="menu-check" aria-hidden="true">✓</div>
-                <div class="menu-card-body">
-                  <div class="menu-title-row">
-                    <div class="menu-name">Margherita Pizza</div>
-                    <div class="menu-price">$12.99</div>
-                  </div>
-                  <div class="menu-desc">Classic tomato sauce, mozzarella, and fresh basil</div>
-                  <div class="menu-bottom-row">
-                    <span class="menu-tag">Pizza</span>
-                  </div>
+              <div class="report-card">
+                <div class="report-icon purple"><i class="fas fa-chart-line"></i></div>
+                <div>
+                  <p>Avg Order Value</p>
+                  <h3>$0</h3>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="section-content" id="reports">
-        <div class="reports-panel">
-          <div class="reports-header">
-            <div>
-              <h2>Financial Reports</h2>
-              <p class="sub">View Revenue And Sales Analytics</p>
-            </div>
-            <button type="button" class="download-report-btn">⤓ Download Report</button>
-          </div>
-
-          <div class="reports-filter">
-            <div class="date-field">
-              <label for="reportStart">Start Date</label>
-              <input type="date" id="reportStart" name="reportStart" value="2026-02-04">
-            </div>
-            <div class="date-field">
-              <label for="reportEnd">End Date</label>
-              <input type="date" id="reportEnd" name="reportEnd" value="2026-02-04">
-            </div>
-          </div>
-
-          <div class="reports-cards">
-            <div class="report-card">
-              <div class="report-icon green">$</div>
-              <div>
-                <p>Total Revenue</p>
-                <h3>$122</h3>
-              </div>
-            </div>
-            <div class="report-card">
-              <div class="report-icon blue">▦</div>
-              <div>
-                <p>Total Orders</p>
-                <h3>0</h3>
-              </div>
-            </div>
-            <div class="report-card">
-              <div class="report-icon purple">$</div>
-              <div>
-                <p>Avg Order Value</p>
-                <h3>$0</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-
-<div class="modal" id="addEmployeeModal">
-  <div class="modal-content">
-
-    <div class="modal-header">
-      <h3>Add New Employee</h3>
-      <button type="button" class="modal-close">&times;</button>
+      </main>
     </div>
-
-    <form id="employeeForm" class="employee-form">
-
-      <div class="form-row-flex">
-
-        <div class="form-group">
-          <label for="fullName">Full Name</label>
-          <input type="text" id="fullName" name="fullName" placeholder="Enter full name" required>
-        </div>
-
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Enter email" required>
-        </div>
-
-      </div>
-
-      <div class="form-row-flex">
-
-        <div class="form-group">
-          <label for="role">Role</label>
-          <select id="role" name="role" required>
-            <option value="">Select Role</option>
-            <option value="waiter">Waiter</option>
-            <option value="chef">Chef</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" placeholder="Enter password" required>
-        </div>
-
-      </div>
-
-      <div class="form-group full-width">
-        <label for="certificate">Certificate (PDF)</label>
-        <input type="file" id="certificate" name="certificate" accept=".pdf" required>
-      </div>
-
-      <div class="btn-row">
-        <button type="submit" class="btn-primary">Add Employee</button>
-        <button type="reset" class="btn-secondary">Cancel</button>
-      </div>
-
-    </form>
+    <!-- /outer-wrapper -->
 
   </div>
-</div>
 
-<div class="modal" id="addTableModal">
-  <div class="modal-content">
+  <!-- ===================== MODALS ===================== -->
 
-    <div class="modal-header">
-      <h3>Add New Table</h3>
-      <button type="button" class="modal-close" aria-label="Close">&times;</button>
+  <!-- Add Employee Modal -->
+  <div class="modal" id="addEmployeeModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Add New Employee</h3>
+        <button type="button" class="modal-close" aria-label="Close">&times;</button>
+      </div>
+      <form id="employeeForm" class="employee-form">
+        <div class="form-row-flex">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter full name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter email" required>
+          </div>
+        </div>
+        <div class="form-row-flex">
+          <div class="form-group">
+            <label for="role">Role</label>
+            <select id="role" name="role" required>
+              <option value="">Select Role</option>
+              <option value="waiter">Waiter</option>
+              <option value="chef">Chef</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter password" required>
+          </div>
+        </div>
+        <div class="form-group full-width">
+          <label for="certificate">Certificate (PDF)</label>
+          <input type="file" id="certificate" name="certificate" accept=".pdf" required>
+        </div>
+        <div class="btn-row">
+          <button type="submit" class="btn-primary">Add Employee</button>
+          <button type="button" class="btn-secondary modal-close-btn">Cancel</button>
+        </div>
+      </form>
     </div>
-
-    <form id="tableForm" class="employee-form">
-
-      <div class="form-row-flex">
-        <div class="form-group">
-          <label for="tableNumber">Table Number</label>
-          <input type="number" id="tableNumber" name="tableNumber" min="1" step="1" required>
-        </div>
-
-        <div class="form-group">
-          <label for="tableCapacity">Capacity</label>
-          <input type="number" id="tableCapacity" name="tableCapacity" min="1" step="1" required>
-        </div>
-      </div>
-
-      <div class="form-row-flex">
-        <div class="form-group">
-          <label for="tablePosition">Position</label>
-          <select id="tablePosition" name="tablePosition" required>
-            <option value="">Select Position</option>
-            <option value="window">Window</option>
-            <option value="center">Center</option>
-            <option value="corner">Corner</option>
-            <option value="outdoor">Outdoor</option>
-            <option value="entrance">Near Entrance</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="form-group full-width">
-        <label for="tableImageFile">Upload Table Image</label>
-        <input type="file" id="tableImageFile" name="tableImageFile" accept="image/*">
-      </div>
-
-      <div class="btn-row">
-        <button type="submit" class="btn-primary">Add Table</button>
-        <button type="reset" class="btn-secondary">Cancel</button>
-      </div>
-
-    </form>
   </div>
-</div>
 
-<div class="modal" id="editMenuModal">
-  <div class="modal-content">
-
-    <div class="modal-header">
-      <h3>Edit Menu Item</h3>
-      <button type="button" class="modal-close" aria-label="Close">&times;</button>
+  <!-- Add Table Modal -->
+  <div class="modal" id="addTableModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Add New Table</h3>
+        <button type="button" class="modal-close" aria-label="Close">&times;</button>
+      </div>
+      <form id="tableForm" class="employee-form">
+        <div class="form-row-flex">
+          <div class="form-group">
+            <label for="tableNumber">Table Number</label>
+            <input type="number" id="tableNumber" name="tableNumber" min="1" step="1" required>
+          </div>
+          <div class="form-group">
+            <label for="tableCapacity">Capacity</label>
+            <input type="number" id="tableCapacity" name="tableCapacity" min="1" step="1" required>
+          </div>
+        </div>
+        <div class="form-row-flex">
+          <div class="form-group">
+            <label for="tablePosition">Position</label>
+            <select id="tablePosition" name="tablePosition" required>
+              <option value="">Select Position</option>
+              <option value="window">Window</option>
+              <option value="center">Center</option>
+              <option value="corner">Corner</option>
+              <option value="outdoor">Outdoor</option>
+              <option value="entrance">Near Entrance</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group full-width">
+          <label for="tableImageFile">Upload Table Image</label>
+          <input type="file" id="tableImageFile" name="tableImageFile" accept="image/*">
+        </div>
+        <div class="btn-row">
+          <button type="submit" class="btn-primary">Add Table</button>
+          <button type="button" class="btn-secondary modal-close-btn">Cancel</button>
+        </div>
+      </form>
     </div>
-
-    <form id="editMenuForm" class="employee-form">
-
-      <div class="form-row-flex">
-        <div class="form-group">
-          <label for="editMenuName">Item Name</label>
-          <input type="text" id="editMenuName" name="editMenuName" required>
-        </div>
-
-        <div class="form-group">
-          <label for="editMenuPrice">Price</label>
-          <input type="text" id="editMenuPrice" name="editMenuPrice" placeholder="$12.99" required>
-        </div>
-      </div>
-
-      <div class="form-row-flex">
-        <div class="form-group">
-          <label for="editMenuTag">Category</label>
-          <input type="text" id="editMenuTag" name="editMenuTag" required>
-        </div>
-      </div>
-
-      <div class="form-group full-width">
-        <label for="editMenuDesc">Description</label>
-        <textarea id="editMenuDesc" name="editMenuDesc" rows="3" required></textarea>
-      </div>
-
-      <div class="btn-row">
-        <button type="submit" class="btn-primary">Save</button>
-        <button type="reset" class="btn-secondary">Cancel</button>
-      </div>
-
-    </form>
   </div>
-</div>
 
-</div>
+  <!-- Edit Menu Modal -->
+  <div class="modal" id="editMenuModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Edit Menu Item</h3>
+        <button type="button" class="modal-close" aria-label="Close">&times;</button>
+      </div>
+      <form id="editMenuForm" class="employee-form">
+        <div class="form-row-flex">
+          <div class="form-group">
+            <label for="editMenuName">Item Name</label>
+            <input type="text" id="editMenuName" name="editMenuName" required>
+          </div>
+          <div class="form-group">
+            <label for="editMenuPrice">Price</label>
+            <input type="text" id="editMenuPrice" name="editMenuPrice" placeholder="$12.99" required>
+          </div>
+        </div>
+        <div class="form-row-flex">
+          <div class="form-group">
+            <label for="editMenuTag">Category</label>
+            <input type="text" id="editMenuTag" name="editMenuTag" required>
+          </div>
+        </div>
+        <div class="form-group full-width">
+          <label for="editMenuDesc">Description</label>
+          <textarea id="editMenuDesc" name="editMenuDesc" rows="3" required></textarea>
+        </div>
+        <div class="btn-row">
+          <button type="submit" class="btn-primary">Save Changes</button>
+          <button type="button" class="btn-secondary modal-close-btn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // ── Tab switching ──────────────────────────────────────────
+    function switchTab(sectionId) {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.section-content').forEach(s => s.classList.remove('active'));
+      const tab = document.querySelector(`.tab[data-section="${sectionId}"]`);
+      const section = document.getElementById(sectionId);
+      if (tab) tab.classList.add('active');
+      if (section) section.classList.add('active');
+    }
+
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => switchTab(tab.dataset.section));
+    });
+
+    // ── Modal helpers ──────────────────────────────────────────
+    function openModal(id) {
+      document.getElementById(id).classList.add('active');
+    }
+    function closeAllModals() {
+      document.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
+    }
+
+    document.getElementById('openAddEmployee')?.addEventListener('click', () => openModal('addEmployeeModal'));
+    document.getElementById('openAddTable')?.addEventListener('click', () => openModal('addTableModal'));
+
+    document.querySelectorAll('.modal-close, .modal-close-btn').forEach(btn => {
+      btn.addEventListener('click', closeAllModals);
+    });
+
+    document.querySelectorAll('.modal').forEach(modal => {
+      modal.addEventListener('click', e => { if (e.target === modal) closeAllModals(); });
+    });
+
+    // ── Menu approve button label fix (was "Approved" — should be "Approve") ──
+    // Already fixed in HTML above
+  </script>
 
   <script src="../JavaScript/admin.js"></script>
 </body>
