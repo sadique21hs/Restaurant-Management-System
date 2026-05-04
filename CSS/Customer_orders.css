@@ -16,6 +16,30 @@
   --radius-card:    10px;
 }
 
+    .logout {
+      width: 32px;
+      height: 32px;
+      border: 1px solid rgba(224,194,143,.6);
+      border-radius: 6px;
+      display: grid;
+      place-items: center;
+      color: #e0c28f;
+      font-size: 18px;
+    }
+
+    .logout::before {
+      content: "";
+      width: 18px;
+      height: 18px;
+      background-color: #e0c28f;
+      -webkit-mask: url('../Images/logout.png') no-repeat center / contain;
+      mask: url('../Images/logout.png') no-repeat center / contain;
+      display: block;
+    }
+
+    .logout img {
+      display: none;
+    }
 /* ==========================================
    Reset & Base
 ========================================== */
