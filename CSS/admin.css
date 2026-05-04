@@ -1,4 +1,23 @@
 
+/* ==========================================
+   CSS Variables / Design Tokens
+========================================== */
+:root {
+  --accent:        #c8a96a;
+  --accent-light:  #dbbf85;
+  --accent-dark:   #a8893a8a;
+  --text-primary:  #f5ede0;
+  --text-muted:    rgba(245,237,224,0.6);
+  --glass-bg:      rgba(40,42,38,0.22);
+  --glass-border:  rgba(255,255,255,0.10);
+  --glass-blur:    blur(5px);
+  --glass-shadow:  0 12px 40px rgba(58, 54, 54, 0.4);
+  --card-bg:       rgba(40,42,38,0.52);
+  --radius-lg:     16px;
+  --radius-md:     10px;
+  --radius-sm:     6px;
+}
+
     .tab img {
       filter: brightness(0) invert(1); 
       transition: filter 0.2s;
@@ -78,8 +97,18 @@
     }
 
     .container {
-      width: 78%;
+      width: 1750px;
       margin: 34px auto;
+      padding: 14px;
+      background: var(--glass-bg);
+      border: none;
+      border-radius: var(--radius-lg);
+      backdrop-filter: var(--glass-blur);
+      -webkit-backdrop-filter: var(--glass-blur);
+      box-shadow: var(--glass-shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
 
     .tabs {
