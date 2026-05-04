@@ -97,26 +97,30 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+      .logout {
+      width: 32px;
+      height: 32px;
+      border: 1px solid rgba(224,194,143,.6);
+      border-radius: 6px;
+      display: grid;
+      place-items: center;
+      color: #e0c28f;
+      font-size: 18px;
+    }
 
-.logout-btn {
-  width: 36px;
-  height: 36px;
-  border: 1px solid rgba(200,169,106,0.4);
-  border-radius: 6px;
-  background: rgba(200,169,106,0.08);
-  color: var(--accent);
-  display: grid;
-  place-items: center;
-  font-size: 15px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
+    .logout::before {
+      content: "";
+      width: 18px;
+      height: 18px;
+      background-color: #e0c28f;
+      -webkit-mask: url('../Images/logout.png') no-repeat center / contain;
+      mask: url('../Images/logout.png') no-repeat center / contain;
+      display: block;
+    }
 
-.logout-btn:hover {
-  background: rgba(200,169,106,0.22);
-  border-color: var(--accent);
-}
-
+    .logout img {
+      display: none;
+    }
 /* ==========================================
    Outer Glass Wrapper
 ========================================== */
@@ -401,15 +405,15 @@ body {
 
 .employees-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 22px;
 }
 
 .employee-card {
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.16);
   border-radius: var(--radius-card);
-  padding: 18px;
+  padding: 24px;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   position: relative;
@@ -418,7 +422,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 160px;
+  min-height: 220px;
 }
 
 .employee-card:hover {
@@ -733,8 +737,8 @@ body {
 
 .table-card {
   position: relative;
-  min-height: 150px;
-  padding: 16px;
+  min-height: 220px;
+  padding: 20px;
   border-radius: 12px;
   background: rgba(0,0,0,0.10);
   border: 1px solid rgba(255,255,255,0.20);
@@ -745,7 +749,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 10px;
   transition: border-color 0.22s ease, box-shadow 0.22s ease;
 }
 
@@ -778,15 +782,15 @@ body {
 }
 
 .table-number {
-  width: 54px;
-  height: 54px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   display: grid;
   place-items: center;
   background: rgba(255,255,255,0.90);
   border: 1px solid rgba(255,255,255,0.35);
   overflow: hidden;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 
 .table-icon {
