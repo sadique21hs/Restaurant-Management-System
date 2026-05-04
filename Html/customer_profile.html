@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feliciano — Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../CSS/customer_profile.css"/>
+</head>
+<body>
+
+  <div class="dashboard">
+
+    <!-- Topbar -->
+    <header class="topbar">
+      <div class="brand">Feliciano</div>
+      <div class="top-right">
+        <div class="dashboard-label">Customer<br>Dashboard</div>
+        <button class="logout-btn" aria-label="Logout">
+          <i class="fas fa-right-from-bracket" style="font-size:30px;"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Outer glass wrapper -->
+    <div class="outer-wrapper">
+
+      <!-- Navbar -->
+      <nav class="navbar">
+        <a href="Customer.html" class="nav-item">
+          <i class="fas fa-utensils"></i> Menu Items
+        </a>
+        <a href="Customer_table.html" class="nav-item">
+          <i class="far fa-calendar-alt"></i> Booking
+        </a>
+        <a href="Customer_orders.html" class="nav-item">
+          <i class="fas fa-shopping-cart"></i> Order List
+        </a>
+        <a href="Customer_profile.html" class="nav-item active">
+          <i class="far fa-user-circle"></i> Profile
+        </a>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="main-content">
+
+        <!-- Profile Card -->
+        <div class="profile-card">
+          <div class="profile-left">
+            <img src="../Images/Customer/pexels-emad-hussien-830139385-27856326.jpg" alt="Avatar" class="avatar" />
+            <div class="profile-info">
+              <h2 class="profile-name">Richard Clark</h2>
+              <p class="profile-since">Member since Jan 2024</p>
+              <div class="profile-contacts">
+                <span class="contact-item">
+                  <i class="far fa-envelope"></i>
+                  najmulhossainnur@gmail.com
+                </span>
+                <span class="contact-item">
+                  <i class="fas fa-phone"></i>
+                  +1 (555) 123-4567
+                </span>
+                <span class="contact-item">
+                  <i class="fas fa-location-dot"></i>
+                  New York, NY
+                </span>
+              </div>
+            </div>
+          </div>
+          <button class="settings-btn">
+            <i class="fas fa-gear"></i> Settings
+          </button>
+        </div>
+
+        <!-- Stats Row -->
+        <div class="stats-row">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-bag-shopping"></i></div>
+            <div class="stat-body">
+              <p class="stat-label">Total Orders</p>
+              <p class="stat-value">47</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i class="far fa-credit-card"></i></div>
+            <div class="stat-body">
+              <p class="stat-label">Total Spent</p>
+              <p class="stat-value">$1,847</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Orders -->
+        <div class="recent-orders-card">
+          <h3 class="recent-title">Recent Orders</h3>
+
+          <div class="recent-list">
+
+            <div class="recent-item">
+              <img src="../Images/food/1.png" alt="Order" class="recent-thumb" />
+              <div class="recent-info">
+                <div class="recent-top">
+                  <span class="recent-id">Order #12847</span>
+                  <span class="recent-price">$68.50</span>
+                </div>
+                <p class="recent-items">Truffle Pasta, Caesar Salad, Tiramisu</p>
+                <p class="recent-date"><i class="far fa-clock"></i> Mar 8, 2026 at 7:30 PM</p>
+              </div>
+            </div>
+
+            <div class="recent-divider"></div>
+
+            <div class="recent-item">
+              <img src="../Images/food/2.png" alt="Order" class="recent-thumb" />
+              <div class="recent-info">
+                <div class="recent-top">
+                  <span class="recent-id">Order #12847</span>
+                  <span class="recent-price">$68.50</span>
+                </div>
+                <p class="recent-items">Truffle Pasta, Caesar Salad, Tiramisu</p>
+                <p class="recent-date"><i class="far fa-clock"></i> Mar 8, 2026 at 7:30 PM</p>
+              </div>
+            </div>
+
+            <div class="recent-divider"></div>
+
+            <div class="recent-item">
+              <img src="../Images/food/3.png" alt="Order" class="recent-thumb" />
+              <div class="recent-info">
+                <div class="recent-top">
+                  <span class="recent-id">Order #12847</span>
+                  <span class="recent-price">$68.50</span>
+                </div>
+                <p class="recent-items">Truffle Pasta, Caesar Salad, Tiramisu</p>
+                <p class="recent-date"><i class="far fa-clock"></i> Mar 8, 2026 at 7:30 PM</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>
