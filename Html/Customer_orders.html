@@ -3,159 +3,167 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Orders</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <title>Feliciano — My Orders</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="stylesheet" href="../CSS/Customer_orders.css"/>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <nav class="nav-links">
-      <a href="#" class="nav-item">
-        <i class="fas fa-utensils"></i> Menu Items
-      </a>
-      <a href="#" class="nav-item">
-        <i class="far fa-calendar-alt"></i> Booking
-      </a>
-      <a href="#" class="nav-item active">
-        <i class="fas fa-shopping-cart"></i> Order List
-      </a>
-      <a href="#" class="nav-item">
-        <i class="far fa-user-circle"></i> Profile
-      </a>
-    </nav>
-  </header>
+  <div class="dashboard">
 
-  <!-- MAIN CONTENT -->
-  <main class="main-content">
+    <!-- Topbar -->
+    <header class="topbar">
+      <div class="brand">Feliciano</div>
+      <div class="top-right">
+        <div class="dashboard-label">Customer<br>Dashboard</div>
+        <button class="logout-btn" aria-label="Logout">
+          <i class="fas fa-right-from-bracket" style="font-size: 30px;"></i>
+        </button>
+      </div>
+    </header>
 
-    <!-- Page Header -->
-    <h1 class="page-title">My Orders</h1>
-    <p class="page-subtitle">Track your orders and download bills</p>
-    <h2 class="section-title">Active Orders (2)</h2>
+    <!-- Outer glass wrapper -->
+    <div class="outer-wrapper">
 
-    <div class="orders-list">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <a href="customer.html" class="nav-item">
+          <i class="fas fa-utensils"></i> Menu Items
+        </a>
+        <a href="customer_table.html" class="nav-item">
+          <i class="far fa-calendar-alt"></i> Booking
+        </a>
+        <a href="customer_orders.html" class="nav-item active">
+          <i class="fas fa-shopping-cart"></i> Order List
+        </a>
+        <a href="#" class="nav-item">
+          <i class="far fa-user-circle"></i> Profile
+        </a>
+      </nav>
 
-      <!-- ORDER CARD 1 — Ready -->
-      <div class="order-card">
+      <!-- Main Content -->
+      <main class="main-content">
 
-        <div class="order-top-row">
-          <div class="order-info">
-            <span class="order-id">Order #order1</span>
-            <span class="order-meta">Table 3 • 10/03/2026, 15:30:05</span>
-          </div>
-          <span class="status-badge ready">
-            <i class="fas fa-check-circle"></i> Ready
-          </span>
-        </div>
+        <h1 class="page-title">My Orders</h1>
+        <p class="page-subtitle">Track your orders and download bills</p>
+        <h2 class="section-title">Active Orders (2)</h2>
 
-        <!-- Progress Tracker -->
-        <div class="progress-tracker">
-          <div class="progress-bar-wrap">
-            <div class="progress-steps">
-              <div class="step done">
-                <div class="step-circle"><i class="fas fa-check"></i></div>
-                <span class="step-label">Placed</span>
+        <div class="orders-list">
+
+          <!-- ORDER CARD 1 — Ready (3 of 4 steps done) -->
+          <div class="order-card">
+            <div class="order-top-row">
+              <div class="order-info">
+                <span class="order-id">Order #order1</span>
+                <span class="order-meta">Table 3 • 10/03/2026, 15:30:05</span>
               </div>
-              <div class="step done">
-                <div class="step-circle"><i class="fas fa-check"></i></div>
-                <span class="step-label">In Kitchen</span>
-              </div>
-              <div class="step done">
-                <div class="step-circle"><i class="fas fa-check"></i></div>
-                <span class="step-label">Ready</span>
-              </div>
-              <div class="step done">
-                <div class="step-circle"><i class="fas fa-check"></i></div>
-                <span class="step-label">Served</span>
+              <span class="status-badge ready">
+                <i class="fas fa-check-circle"></i> Ready
+              </span>
+            </div>
+
+            <div class="progress-tracker">
+              <div class="progress-bar-wrap">
+                <div class="progress-steps">
+                  <div class="step done">
+                    <div class="step-circle"><i class="fas fa-check"></i></div>
+                    <span class="step-label">Placed</span>
+                  </div>
+                  <div class="step done">
+                    <div class="step-circle"><i class="fas fa-check"></i></div>
+                    <span class="step-label">In Kitchen</span>
+                  </div>
+                  <div class="step done">
+                    <div class="step-circle"><i class="fas fa-check"></i></div>
+                    <span class="step-label">Ready</span>
+                  </div>
+                  <div class="step">
+                    <div class="step-circle"><i class="fas fa-check"></i></div>
+                    <span class="step-label">Served</span>
+                  </div>
+                </div>
+                <div class="progress-line"><div class="progress-fill" style="width: 75%;"></div></div>
               </div>
             </div>
-            <div class="progress-line"><div class="progress-fill" style="width: 100%;"></div></div>
-          </div>
-        </div>
 
-        <!-- Order Items -->
-        <div class="order-items">
-          <div class="order-divider"></div>
-          <div class="item-row">
-            <span class="item-name">2x Margherita Pizza</span>
-            <span class="item-price">$25.98</span>
-          </div>
-          <div class="item-row">
-            <span class="item-name">1x Caesar Salad</span>
-            <span class="item-price">$8.99</span>
-          </div>
-          <div class="order-divider"></div>
-          <div class="item-row total-row">
-            <span class="item-name">Total (incl. tax)</span>
-            <span class="item-price total-price">$38.12</span>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- ORDER CARD 2 — In Kitchen -->
-      <div class="order-card">
-
-        <div class="order-top-row">
-          <div class="order-info">
-            <span class="order-id">Order #order2</span>
-            <span class="order-meta">Table 3 • 10/03/2026, 15:30:05</span>
-          </div>
-          <span class="status-badge in-kitchen">
-            <i class="fas fa-circle"></i> In Kitchen
-          </span>
-        </div>
-
-        <!-- Progress Tracker -->
-        <div class="progress-tracker">
-          <div class="progress-bar-wrap">
-            <div class="progress-steps">
-              <div class="step done">
-                <div class="step-circle"><i class="fas fa-check"></i></div>
-                <span class="step-label">Placed</span>
+            <div class="order-items">
+              <div class="order-divider"></div>
+              <div class="item-row">
+                <span class="item-name">2x Margherita Pizza</span>
+                <span class="item-price">$25.98</span>
               </div>
-              <div class="step done">
-                <div class="step-circle"><i class="fas fa-check"></i></div>
-                <span class="step-label">In Kitchen</span>
+              <div class="item-row">
+                <span class="item-name">1x Caesar Salad</span>
+                <span class="item-price">$8.99</span>
               </div>
-              <div class="step">
-                <div class="step-circle"><i class="fas fa-check"></i></div>
-                <span class="step-label">Ready</span>
-              </div>
-              <div class="step">
-                <div class="step-circle"><i class="fas fa-check"></i></div>
-                <span class="step-label">Served</span>
+              <div class="order-divider"></div>
+              <div class="item-row total-row">
+                <span class="item-name">Total (incl. tax)</span>
+                <span class="item-price total-price">$38.12</span>
               </div>
             </div>
-            <div class="progress-line"><div class="progress-fill" style="width: 33%;"></div></div>
           </div>
-        </div>
 
-        <!-- Order Items -->
-        <div class="order-items">
-          <div class="order-divider"></div>
-          <div class="item-row">
-            <span class="item-name">2x Margherita Pizza</span>
-            <span class="item-price">$25.98</span>
-          </div>
-          <div class="item-row">
-            <span class="item-name">1x Caesar Salad</span>
-            <span class="item-price">$8.99</span>
-          </div>
-          <div class="order-divider"></div>
-          <div class="item-row total-row">
-            <span class="item-name">Total (incl. tax)</span>
-            <span class="item-price total-price">$38.12</span>
-          </div>
-        </div>
+          <!-- ORDER CARD 2 — In Kitchen (2 of 4 steps done) -->
+          <div class="order-card">
+            <div class="order-top-row">
+              <div class="order-info">
+                <span class="order-id">Order #order2</span>
+                <span class="order-meta">Table 3 • 10/03/2026, 15:30:05</span>
+              </div>
+              <span class="status-badge in-kitchen">
+                <i class="fas fa-clock" style="font-size: 12px;"></i> In Kitchen
+              </span>
+            </div>
 
-      </div>
+            <div class="progress-tracker">
+              <div class="progress-bar-wrap">
+                <div class="progress-steps">
+                  <div class="step done">
+                    <div class="step-circle"><i class="fas fa-check"></i></div>
+                    <span class="step-label">Placed</span>
+                  </div>
+                  <div class="step done">
+                    <div class="step-circle"><i class="fas fa-check"></i></div>
+                    <span class="step-label">In Kitchen</span>
+                  </div>
+                  <div class="step">
+                    <div class="step-circle"><i class="fas fa-check"></i></div>
+                    <span class="step-label">Ready</span>
+                  </div>
+                  <div class="step">
+                    <div class="step-circle"><i class="fas fa-check"></i></div>
+                    <span class="step-label">Served</span>
+                  </div>
+                </div>
+                <div class="progress-line"><div class="progress-fill" style="width: 48%;"></div></div>
+              </div>
+            </div>
+
+            <div class="order-items">
+              <div class="order-divider"></div>
+              <div class="item-row">
+                <span class="item-name">2x Margherita Pizza</span>
+                <span class="item-price">$25.98</span>
+              </div>
+              <div class="item-row">
+                <span class="item-name">1x Caesar Salad</span>
+                <span class="item-price">$8.99</span>
+              </div>
+              <div class="order-divider"></div>
+              <div class="item-row total-row">
+                <span class="item-name">Total (incl. tax)</span>
+                <span class="item-price total-price">$38.12</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </main>
 
     </div>
-  </main>
+  </div>
 
 </body>
 </html>
