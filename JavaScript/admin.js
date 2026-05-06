@@ -1,98 +1,132 @@
+
 const tabs = document.querySelectorAll('.tab');
 const sections = document.querySelectorAll('.section-content');
 
 tabs.forEach(tab => {
   tab.addEventListener('click', () => {
-    const sectionId = tab.getAttribute('data-section');
-    
+    const sectionId = tab.getAttribute('data-section'); 
     tabs.forEach(t => t.classList.remove('active'));
     sections.forEach(s => s.classList.remove('active'));
-    
+
     tab.classList.add('active');
     document.getElementById(sectionId).classList.add('active');
   });
 });
 
+//-----------
+
 const modal = document.getElementById('addEmployeeModal');
 const addEmployeeBtn = document.querySelector('.add-employee-btn');
-const modalClose = document.querySelector('.modal-close');
-const btnCancel = document.querySelector('.btn-cancel');
+const modalClose = modal ? modal.querySelector('.modal-close') : null;
+
+const openModal = () => {
+  if (!modal) return;
+  modal.classList.add('active');
+};
+
+const closeModal = () => {
+  if (!modal) return;
+  modal.classList.remove('active');
+};
 
 if (addEmployeeBtn) {
   addEmployeeBtn.addEventListener('click', () => {
-    modal.classList.add('active');
+    openModal();
   });
 }
 
-modalClose.addEventListener('click', () => {
-  modal.classList.remove('active');
-});
+if (modalClose) {
+  modalClose.addEventListener('click', () => {
+    closeModal();
+  });
+}
 
-btnCancel.addEventListener('click', () => {
-  modal.classList.remove('active');
-});
+const modalCancelBtn = document.querySelector('#addEmployeeModal .btn-secondary, #addEmployeeModal button[type="reset"]');
+if (modalCancelBtn) {
+  modalCancelBtn.addEventListener('click', () => {
+    closeModal();
+  });
+}
 
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.classList.remove('active');
-  }
-});
-
-const employeeForm = document.querySelector('.employee-form');
-employeeForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  
-  const fullName = employeeForm.querySelector('input[placeholder="Enter full name"]').value;
-  const email = employeeForm.querySelector('input[placeholder="Enter email"]').value;
-  const role = employeeForm.querySelector('select').value;
-  
-  const newCard = document.createElement('div');
-  newCard.className = 'employee-card';
-  newCard.innerHTML = `
-    <div class="employee-info">
-      <h4>${fullName}</h4>
-      <p>${email}</p>
-      <div class="status-badges">
-        <span class="badge clocked-out">🔴 Clocked Out</span>
-        <span class="badge approved">✓ Approved</span>
-      </div>
-    </div>
-    <span class="role-badge ${role}">${role.charAt(0).toUpperCase() + role.slice(1)}</span>
-  `;
-  
-  document.querySelector('.employees-grid').appendChild(newCard);
-  
-  employeeForm.reset();
-  modal.classList.remove('active');
-  
-  alert('Employee added successfully!');
-});
-
-const actionBtns = document.querySelectorAll('.action-btn');
-actionBtns.forEach(btn => {
+//-----
+document.querySelectorAll('.table-edit-btn').forEach(btn => {
   btn.addEventListener('click', () => {
-    const text = btn.textContent.trim();
-    
-    if (text.includes('Add Employee')) {
-      document.querySelector('[data-section="employees"]').click();
-      setTimeout(() => addEmployeeBtn.click(), 300);
-    } else if (text.includes('Approve Customer')) {
-      document.querySelector('[data-section="customer"]').click();
-    } else if (text.includes('View Reports')) {
-      document.querySelector('[data-section="reports"]').click();
-    } else if (text.includes('Manage Tables')) {
-      document.querySelector('[data-section="tables"]').click();
-    } else if (text.includes('Menu Items')) {
-      document.querySelector('[data-section="menu"]').click();
-    } else if (text.includes('Export Data')) {
-      alert('Exporting data...');
+    const editTableModal = document.getElementById('editTableModal');
+    if (editTableModal) {
+      editTableModal.classList.add('active');
     }
   });
 });
 
-const logoutBtn = document.querySelector('.logout');
-logoutBtn.addEventListener('click', () => {
-  if (confirm('Are you sure you want to logout?')) {
-    alert('Logging out...');
+const editTableModal = document.getElementById('editTableModal');
+if (editTableModal) {
+  const closeBtn = editTableModal.querySelector('.modal-close');
+  const cancelBtn = editTableModal.querySelector('.btn-secondary');
+  
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      editTableModal.classList.remove('active');
+    });
   }
+  
+  if (cancelBtn) {
+    cancelBtn.addEventListener('click', () => {
+      editTableModal.classList.remove('active');
+    });
+  }
+  
+}
+//-----
+const tableModal = document.getElementById('addTableModal');
+
+const openTableModal = () => {
+  if (!tableModal) return;
+  tableModal.classList.add('active');
+};
+
+const closeTableModal = () => {
+  if (!tableModal) return;
+  tableModal.classList.remove('active');
+};
+
+if (tableModal) {
+  const tableCloseBtn = tableModal.querySelector('.modal-close');
+
+  if (tableCloseBtn) {
+    tableCloseBtn.addEventListener('click', () => closeTableModal());
+  }
+
+  const tableCancelBtn = tableModal.querySelector('.btn-secondary, button[type="reset"]');
+  if (tableCancelBtn) {
+    tableCancelBtn.addEventListener('click', () => closeTableModal());
+  }
+}
+
+const addTableBtn = document.querySelector('.add-table-btn');
+if (addTableBtn) {
+  addTableBtn.addEventListener('click', () => {
+    openTableModal();
+  });
+}
+
+//----
+const editMenuModal = document.getElementById('editMenuModal');
+const editMenuForm = document.getElementById('editMenuForm');
+
+document.querySelectorAll('.menu-edit-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    editMenuModal.classList.add('active');
+  });
+});
+
+editMenuModal.querySelector('.modal-close').addEventListener('click', () => {
+  editMenuModal.classList.remove('active');
+});
+
+editMenuModal.querySelector('.btn-secondary').addEventListener('click', () => {
+  editMenuModal.classList.remove('active');
+});
+editMenuForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  editMenuModal.classList.remove('active');
 });

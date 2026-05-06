@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliciano — Customer Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../CSS/customer.css" />
+</head>
+
+<body>
+  <div class="dashboard">
+
+    <!-- Topbar -->
+    <header class="topbar">
+      <div class="brand">Feliciano</div>
+      <div class="top-right">
+        <div class="dashboard-label">Customer<br>Dashboard</div>
+            <div class="logout" onclick="window.location.href='login.html'">
+          <img src="../Images/logout.png" alt="Logout" class="logout-icon">
+         </div>
+      </div>
+    </header>
+
+    <!-- Outer glass wrapper -->
+    <div class="outer-wrapper">
+
+      <!-- Navbar -->
+      <nav class="navbar">
+        <a href="Customer.html" class="nav-item active">
+          <i class="fas fa-utensils"></i> Menu Items
+        </a>
+        <a href="Customer_table.html" class="nav-item">
+          <i class="far fa-calendar-alt"></i> Booking
+        </a>
+        <a href="Customer_orders.html" class="nav-item">
+          <i class="fas fa-shopping-cart"></i> Order List
+        </a>
+        <a href="Customer_profile.html" class="nav-item">
+          <i class="far fa-user-circle"></i> Profile
+        </a>
+      </nav>
+
+      <!-- Main Layout -->
+      <main class="main-layout">
+
+        <!-- Left: Menu Section -->
+        <section class="menu-section">
+
+          <!-- Category Filter Bar -->
+          <div class="category-bar">
+            <span class="cat-btn active">All</span>
+            <span class="cat-btn">Pizza</span>
+            <span class="cat-btn">Burgers</span>
+            <span class="cat-btn">Salads</span>
+            <span class="cat-btn">Main Course</span>
+            <span class="cat-btn">Pasta</span>
+            <span class="cat-btn">Desserts</span>
+            <span class="cat-btn">Appetizers</span>
+          </div>
+
+          <!-- Menu Grid -->
+          <div class="menu-grid">
+
+            <div class="menu-card">
+              <div class="card-img" style="background-image:url('../Images/food/1.png')">
+                <span class="card-tag">Pizza</span>
+              </div>
+              <div class="card-body">
+                <div class="card-title-row">
+                  <span class="card-name">Margherita Pizza</span>
+                  <span class="card-price">$12.99</span>
+                </div>
+                <p class="card-desc">Classic tomato sauce, mozzarella, and fresh basil</p>
+                <div class="card-footer">
+                  <button class="add-btn">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <div class="card-img" style="background-image:url('../Images/food/2.png')">
+                <span class="card-tag">Burgers</span>
+              </div>
+              <div class="card-body">
+                <div class="card-title-row">
+                  <span class="card-name">Classic Burger</span>
+                  <span class="card-price">$14.50</span>
+                </div>
+                <p class="card-desc">Juicy beef patty with lettuce, tomato and house sauce</p>
+                <div class="card-footer">
+                  <button class="add-btn">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <div class="card-img" style="background-image:url('../Images/food/3.png')">
+                <span class="card-tag">Salads</span>
+              </div>
+              <div class="card-body">
+                <div class="card-title-row">
+                  <span class="card-name">Garden Salad</span>
+                  <span class="card-price">$9.99</span>
+                </div>
+                <p class="card-desc">Fresh greens, cherry tomatoes, cucumber, lemon dressing</p>
+                <div class="card-footer">
+                  <button class="add-btn">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <div class="card-img" style="background-image:url('../Images/food/4.png')">
+                <span class="card-tag">Main Course</span>
+              </div>
+              <div class="card-body">
+                <div class="card-title-row">
+                  <span class="card-name">Grilled Salmon</span>
+                  <span class="card-price">$18.00</span>
+                </div>
+                <p class="card-desc">Atlantic salmon, herb butter, seasonal vegetables</p>
+                <div class="card-footer">
+                  <button class="add-btn">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <div class="card-img" style="background-image:url('../Images/food/5.png')">
+                <span class="card-tag">Pasta</span>
+              </div>
+              <div class="card-body">
+                <div class="card-title-row">
+                  <span class="card-name">Penne Arrabbiata</span>
+                  <span class="card-price">$13.50</span>
+                </div>
+                <p class="card-desc">Spicy tomato sauce with garlic and fresh parsley</p>
+                <div class="card-footer">
+                  <button class="add-btn">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <div class="card-img" style="background-image:url('../Images/food/6.png')">
+                <span class="card-tag">Desserts</span>
+              </div>
+              <div class="card-body">
+                <div class="card-title-row">
+                  <span class="card-name">Tiramisu</span>
+                  <span class="card-price">$7.50</span>
+                </div>
+                <p class="card-desc">Classic Italian espresso dessert with mascarpone</p>
+                <div class="card-footer">
+                  <button class="add-btn">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <div class="card-img" style="background-image:url('../Images/food/7.png')">
+                <span class="card-tag">Appetizers</span>
+              </div>
+              <div class="card-body">
+                <div class="card-title-row">
+                  <span class="card-name">Bruschetta</span>
+                  <span class="card-price">$8.99</span>
+                </div>
+                <p class="card-desc">Toasted bread, fresh tomatoes, garlic, extra virgin olive oil</p>
+                <div class="card-footer">
+                  <button class="add-btn">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <div class="card-img" style="background-image:url('../Images/food/8.png')">
+                <span class="card-tag">Pizza</span>
+              </div>
+              <div class="card-body">
+                <div class="card-title-row">
+                  <span class="card-name">Pepperoni Pizza</span>
+                  <span class="card-price">$15.99</span>
+                </div>
+                <p class="card-desc">Rich tomato base, pepperoni, mozzarella and oregano</p>
+                <div class="card-footer">
+                  <button class="add-btn">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <div class="card-img" style="background-image:url('../Images/food/9.png')">
+                <span class="card-tag">Salads</span>
+              </div>
+              <div class="card-body">
+                <div class="card-title-row">
+                  <span class="card-name">Caesar Salad</span>
+                  <span class="card-price">$11.00</span>
+                </div>
+                <p class="card-desc">Romaine, parmesan, croutons and anchovy caesar dressing</p>
+                <div class="card-footer">
+                  <button class="add-btn">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-card">
+              <div class="card-img" style="background-image:url('../Images/food/10.png')">
+                <span class="card-tag">Desserts</span>
+              </div>
+              <div class="card-body">
+                <div class="card-title-row">
+                  <span class="card-name">Chocolate Fondant</span>
+                  <span class="card-price">$6.50</span>
+                </div>
+                <p class="card-desc">Warm molten chocolate cake served with vanilla ice cream</p>
+                <div class="card-footer">
+                  <button class="add-btn">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- /menu-grid -->
+        </section>
+
+        <!-- Right: Cart Panel -->
+        <aside class="cart-panel">
+          <div class="cart-header">
+            <i class="fas fa-shopping-cart cart-icon"></i>
+            <h2 class="cart-title">Your Cart <span style="color:beige;">(0)</span></h2>
+          </div>
+          <div class="cart-empty">
+            <p>Cart is empty</p>
+          </div>
+        </aside>
+
+      </main>
+    </div>
+    <!-- /outer-wrapper -->
+
+  </div>
+  <script src="../JavaScript/customer.js"></script>
+</body>
+</html>
